@@ -4,9 +4,9 @@ export * from './career'
 
 // personal info
 export const name = 'Isabella Hanqi Ding'
-export const headline = 'A Game Creator, Digital Media Designer.'
+export const headline = 'A Game Creator, Digital Media Designer with a passion for crafting immersive experiences that blend storytelling, interaction, and visual design.'
 export const introduction =
-  "Coucou Les Amis! My name is Derek Hu. I'm from Hubei and an alumnus of BUPT, UChicago, and Tsinghua. I’ve been teaching Computer Science at SCLS since 2020."
+  "Coucou Les Amis! My name is Isabella Hanqi Ding. I graduated from York University Digital Media program. Since then, I’ve been exploring the intersection of technology, creativity, and play."
 export const email = 'isabellalading@gmail.com'
 export const githubUsername = 'IsabellaHanqiDing'
 
