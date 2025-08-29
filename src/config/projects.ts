@@ -34,15 +34,15 @@ export const awards: Array<ActivityItemType> = [
 ]
 
 // Research & Projects
-export const projectHeadLine = "Research & Projects"
-export const projectIntro = "Academic research and technical projects I've worked on."
+export const projectHeadLine = "Projects"
+export const projectIntro = "Projects I've worked on."
 
 export const projects: Array<ProjectItemType> = [
   {
-    name: 'Student Final Project Portfolio',
-    description: 'Static website portfolio',
-    link: { href: 'scls-cs.com', label: 'GitHub Cards' },
-    tags: ['Website', 'Next.js', 'TailwindCSS', 'DaisyUI', 'Portfolio']
+    name: 'Dear Diary',
+    description: 'Contributed to the development of a Unity-based open-world story-driven game as part of a collaborative team, focusing on game design, narrative writing, and artistic illustration.',
+    link: { href: 'https://hahajace.itch.io/dear-diary', label: 'itch.io' },
+    tags: ['UnityGame', 'Maya', 'C#', 'SketchBook', 'Portfolio']
   },
   {
     name: 'Seeking DNA',
