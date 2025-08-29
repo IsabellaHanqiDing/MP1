@@ -20,16 +20,16 @@ export const awardsIntro = "Recognition for academic and professional achievemen
 
 export const awards: Array<ActivityItemType> = [
   {
-    name: 'Outstanding Teacher Award',
-    description: '',
-    date: '2024',
-    location: 'SCLS, Shanghai',
+    name: 'YU Automatic Ectrance Scholarship',
+    description: 'All Entrance Scholarships are confirmed on final grades. Scholarships are based on final admission average which is calculated including perequisite courses.',
+    date: '2019',
+    location: 'Toronto, ON',
   },
   {
-    name: 'Zhui Ying Award',
-    description: '',
-    date: '2023',
-    location: 'Qingpu, Shanghai',
+    name: 'Student Life Award',
+    description: 'This award is based on final average grade.',
+    date: '2019',
+    location: 'Toronto, ON',
   },
 ]
 
@@ -70,7 +70,7 @@ export const activitiesIntro = "Personal interests and community contributions."
 
 export const activities: Array<ActivityItemType> = [
   {
-    name: 'Python Workshop',
+    name: 'VR Workshop',
     description:
       'Teaching basic Python programming concepts to beginners. Covering variables, control flow, and functions.',
     date: '2024-02-24',

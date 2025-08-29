@@ -10,18 +10,20 @@ export const introduction =
 export const email = 'isabellalading@gmail.com'
 export const githubUsername = 'IsabellaHanqiDing'
 
+
 // about page
-export const aboutMeHeadline = 'Who Are You and Why Should I Care?'
+export const aboutMeHeadline = 'About Isabella'
 export const aboutParagraphs = [
-  "Coucou Les Amis! My name is Derek Hu. I'm from Hubei and an alumnus of BUPT, UChicago, and Tsinghua. I’ve been teaching Computer Science at SCLS since 2020.",
-  'Currently I am working on a new course called AI Camp, an innovative course where high school students create real-world products and startups while exploring the frontiers of AI.',
-  "I started this blog to share the insights I learn every day. Most blogs focus on education in Artificial Intelligence and general computer science, while others share the life lessons I've learned.",
+  "Coucou Les Amis! My name is Isabella Hanqi Ding. I graduated from York University Digital Media program. Since then, I’ve been exploring the intersection of technology, creativity, and play.",
+  'I’m currently focused on game, UIUX and website design.',
+  "I started this blog to share the insights I learn every day. Most blogs focus on Game analysis, Game design, website design and interactive art, while others share the life lessons I've learned.",
+  "When I’m not designing or coding, I’m making music (Logic Pro, Adobe Audition) or out with my camera capturing everyday stories."
 ]
 
 // blog
 export const blogHeadLine = "What I've thinking about."
 export const blogIntro =
-  "I've written something about AI, programming and life."
+  "I've written something about game, programming, arts and life."
 
 // social links
 export type SocialLinkType = {
@@ -33,14 +35,24 @@ export type SocialLinkType = {
 
 export const socialLinks: Array<SocialLinkType> = [
   {
-    name: 'Tiktok',
-    icon: 'tiktok',
-    href: 'https://www.tiktok.com/@harvard?lang=en',
+    name: 'Instagram',
+    icon: 'instagram',
+    href: 'https://www.instagram.com/isabellalad?igsh=MWdmZjN2eDdoYXZ6ZA==',
+  },
+  {
+    name: 'Discord',
+    icon: 'discord',
+    href: 'https://discord.gg/efvb78zu',
   },
   {
     name: 'Bilibili',
     icon: 'bilibili',
     href: 'https://space.bilibili.com/59417088',
+  },
+  {
+    name: 'NetEase Cloud Music',
+    icon: 'neteasecloudmusic',
+    href: 'https://y.music.163.com/m/user?id=544629781',
   },
 ]
 
