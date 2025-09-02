@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { Favicon } from "favicon-stealer";
 
 export function ProjectCard({ project, titleAs }: { project: ProjectItemType, titleAs?: keyof JSX.IntrinsicElements }) {
-  const utmLink = `https://${project.link.href}?utm_source=${utm_source}`
+  const cleanLink = project.link.href
   let Component = titleAs ?? 'h2'
   return (
     <li className='group relative flex flex-col items-start h-full'>
@@ -45,13 +45,14 @@ export function ProjectCard({ project, titleAs }: { project: ProjectItemType, ti
             </div>
           )}
         </div>
-        <Link
-          href={utmLink}
+         {}
+        <a
+          href={cleanLink}
           target='_blank'
           rel='noopener noreferrer'
           className='absolute inset-0 z-20'>
           <ArrowUpRight size={32} weight="duotone" className="absolute top-4 right-4 h-4 w-4 group-hover:text-primary group-hover:cursor-pointer" />
-        </Link>
+        </a>
       </div>
     </li>
   )

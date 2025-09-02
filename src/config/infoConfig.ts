@@ -50,7 +50,7 @@ export const socialLinks: Array<SocialLinkType> = [
     href: 'https://space.bilibili.com/59417088',
   },
   {
-    name: 'NetEase Cloud Music',
+    name: 'Music',
     icon: 'applemusic',
     href: 'https://music.163.com/#/artist?id=35605021',
   },

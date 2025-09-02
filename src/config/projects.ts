@@ -41,25 +41,25 @@ export const projects: Array<ProjectItemType> = [
   {
     name: 'Dear Diary',
     description: 'Contributed to the development of a Unity-based open-world story-driven game as part of a collaborative team, focusing on game design, narrative writing, and artistic illustration.',
-    link: { href: 'https://hahajace.itch.io/dear-diary', label: 'itch.io' },
+    link: { href: 'https://hahajace.itch.io/dear-diary', label: '' },
     tags: ['UnityGame', 'Maya', 'C#', 'SketchBook', 'Portfolio']
   },
   {
-    name: 'Seeking DNA',
-    description: '2022 SCLS Hackathon',
-    link: { href: 'https://scls-cs.gitbook.io/scls-apcs-lab/lab5-dna', label: 'Hackathon' },
-    tags: ['Hackathon', 'Java']
+    name: 'Data Visualization',
+    description: 'Developed a data visualization artwork using p5.js, where different instruments and tracks of a musical piece were represented through distinct visual patterns.',
+    link: { href: 'https://editor.p5js.org/hanqi666/sketches/Ly8fRr9-O', label: '' },
+    tags: ['P5.js', 'Music']
   },
   {
-    name: 'Texas Holdem Poker Judge',
-    description: '2024 SCLS Hackathon',
-    link: { href: 'https://onecompiler.com/challenges/42yf4n5yn/scls-hackathon', label: 'Hackathon' },
-    tags: ['Hackathon']
+    name: 'Board Game',
+    description: 'Worked with a team to create a fun, accessible board game designed for social play. The game is fully printable—just download the files, print them out, and enjoy with friends.',
+    link: { href: 'https://onecompiler.com/challenges/42yf4n5yn/scls-hackathon', label: '' },
+    tags: ['BoardGame']
   },
   {
     name: 'AI Camp Course Development',
     description: 'Developed a comprehensive AI curriculum for high school students, incorporating real-world projects and startup concepts.',
-    link: { href: 'https://scls-cs.gitbook.io/ai-camp', label: 'View Course' },
+    link: { href: 'https://scls-cs.gitbook.io/ai-camp', label: '' },
     tags: ['Education', 'AI']
   },
 ]
