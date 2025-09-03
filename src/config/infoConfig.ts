@@ -1,6 +1,6 @@
 export * from './projects'
 export * from './education'
-export * from './career'
+
 
 // personal info
 export const name = 'Isabella Hanqi Ding'
@@ -51,7 +51,7 @@ export const socialLinks: Array<SocialLinkType> = [
   },
   {
     name: 'Music',
-    icon: 'applemusic',
+    icon: 'neteasecloudmusic',
     href: 'https://music.163.com/#/artist?id=35605021',
   },
 ]

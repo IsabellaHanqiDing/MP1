@@ -20,10 +20,10 @@ export type EducationItemType = {
       end: '2024'
     },
     {
-      school: 'University of Chicago',
-      major: 'Computer Science',
+      school: 'Henan Experimental High School',
+      major: 'High School',
       logo: 'college',
-      start: '2013',
-      end: '2015'
+      start: '2016',
+      end: '2019'
     },
   ]
