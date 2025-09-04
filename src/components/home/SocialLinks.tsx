@@ -10,9 +10,9 @@ export default function SocialLinks({ className }: { className?: string }) {
     return (
         <div className={cn("mt-6 flex items-center", className)}>
             {socialLinks.map((link) => (
-                <Link
+               <a
                     key={link.name}
-                    href={`${link.href}?utm_source=${utm_source}`}
+                    href={link.href} 
                     target="_blank"
                     rel="noreferrer"
                     aria-label={link.ariaLabel ?? `Follow on ${link.name}`}
@@ -20,7 +20,7 @@ export default function SocialLinks({ className }: { className?: string }) {
                 >
                     <CustomIcon name={link.icon} />
                     <span className="sr-only">{link.name}</span>
-                </Link>
+                </a>
             ))}
             <Link
                 href={`mailto:${email}`}
