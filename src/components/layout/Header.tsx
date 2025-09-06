@@ -121,7 +121,7 @@ function NavItem({
 function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full px-3 text-sm font-medium bg-card ring-1 ring-muted shadow-md backdrop-blur">
+       <ul className="flex rounded-full px-3 text-sm font-medium glass-effect shadow-lg backdrop-blur-md">
         {navItems.map((item, index) => (
           <Fragment key={item.name}>
             {index > 0 && (

@@ -19,12 +19,14 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         {/* personal info */}
-        <div className="mb-10 grid grid-cols-1 md:grid-cols-2">
-          <div className='md:mt-20'>
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl opacity-80">
-              {headline}
+        <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className='md:mt-20 space-y-6'>
+             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
+              <span className="bg-clip-text text-transparent gradient-primary animate-gradient bg-300% motion-safe:transition-all">
+                {headline}
+              </span>
             </h2>
-            <p className="mt-6 text-xl text-muted-foreground">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
               {introduction}
             </p>
             <SocialLinks className='md:mt-24'/>
@@ -33,6 +35,24 @@ export default async function Home() {
             <IconCloud iconSlugs={techIcons} />
           </div>
         </div>
+        <div className="flex gap-4 pt-4">
+              <a
+                href="#projects"
+                className="px-6 py-3 rounded-full gradient-primary text-white font-semibold hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl"
+              >
+                View My Work
+              </a>
+              <a
+                href="/about"
+                className="px-6 py-3 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+              >
+                About Me
+              </a>
+              
+            
+            </div>
+            
+            <SocialLinks className='md:mt-12'/>
 
         {/* Awards */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">

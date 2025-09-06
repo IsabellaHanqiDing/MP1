@@ -6,42 +6,48 @@ import Link from 'next/link'
 
 export function ActivityCard({ activity, titleAs }: { activity: ActivityItemType, titleAs?: keyof JSX.IntrinsicElements }) {
   let Component = titleAs ?? 'h2'
+  
   return (
-    <li className='group relative flex flex-col items-start h-full'>
-      <div className="relative flex flex-col justify-between h-full w-full py-5 px-6 rounded-2xl border border-muted-foreground/20 shadow-sm transition-all group-hover:scale-[1.03] group-hover:shadow-md group-hover:bg-muted/5">
-        <div className=''>
-          <div className='flex flex-col sm:flex-row justify-center sm:justify-start items-start sm:items-center gap-2'>
-            <Calendar size={20} />
-            <Component className="text-sm font-semibold tracking-tight">
+    <li className='group relative'>
+      <div className="relative h-full overflow-hidden rounded-2xl bg-card p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-border/50">
+        {/* Decorative gradient line */}
+        <div className="absolute top-0 left-0 right-0 h-1 gradient-primary"></div>
+        
+        <div className='space-y-4'>
+          <div className='flex items-center gap-3'>
+            <div className="p-2 rounded-lg bg-primary/10">
+              <Calendar size={20} className="text-primary" />
+            </div>
+            <Component className="text-base font-bold">
               {activity.name}
             </Component>
           </div>
-          <p className="relative z-10 mt-2 text-sm text-muted-foreground">
+          
+          <p className="text-sm text-muted-foreground leading-relaxed">
             {activity.description}
           </p>
-        </div>
-
-        <div className="relative z-10 mt-auto pt-4">
-          <div className='flex flex-row items-center gap-4 text-xs font-semibold opacity-80'>
-            <div className="flex items-center gap-1">
-              <Clock size={16} /> 
-              {activity.date}
+          
+          <div className='flex items-center gap-4 text-xs text-muted-foreground'>
+            <div className="flex items-center gap-1.5">
+              <Clock size={14} className="text-primary/60" /> 
+              <span>{activity.date}</span>
             </div>
-            <div className="flex items-center gap-1">
-              <MapPin size={16} /> 
-              {activity.location}
+            <div className="flex items-center gap-1.5">
+              <MapPin size={14} className="text-primary/60" /> 
+              <span>{activity.location}</span>
             </div>
           </div>
         </div>
+        
+        {activity.link && (
+          <Link
+            href={activity.link}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='absolute inset-0 z-20'
+          />
+        )}
       </div>
-      {activity.link && (
-        <Link
-          href={activity.link}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='absolute inset-0 z-20'
-        />
-      )}
     </li>
   )
 }
