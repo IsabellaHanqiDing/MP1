@@ -1,67 +1,123 @@
 /* src/styles/tailwind.css */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
-@import './prism.css';
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 99%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 259 94% 61%;  /* Vibrant purple */
+    --background: 220 50% 4%;
+    --foreground: 0 0% 100%;
+    --card: 220 50% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 50% 7%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 280 85% 65%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 239 84% 67%; /* Complementary blue */
+    --secondary: 200 100% 50%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 329 86% 70%; /* Pink accent */
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
+    --muted: 220 30% 12%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 330 100% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 92%;
-    --input: 240 5.9% 90%;
-    --ring: 259 94% 61%;
-    --radius: 1rem;
+    --border: 280 30% 15%;
+    --input: 220 50% 10%;
+    --ring: 280 85% 65%;
+    --radius: 0.5rem;
   }
-
-  .dark {
-    --background: 224 71% 4%;
-    --foreground: 0 0% 95%;
-    --card: 224 71% 7%;
-    --card-foreground: 0 0% 95%;
-    --popover: 224 71% 4%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 263 90% 71%; /* Lighter purple for dark mode */
-    --primary-foreground: 224 71% 4%;
-    --secondary: 239 84% 77%;
-    --secondary-foreground: 224 71% 4%;
-    --muted: 224 71% 12%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 329 86% 80%;
-    --accent-foreground: 224 71% 4%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 224 71% 12%;
-    --input: 224 71% 12%;
-    --ring: 263 90% 71%;
+  
+  /* Force dark mode */
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #0a0a15 0%, #15051a 50%, #0a0a15 100%);
+    font-family: 'Exo 2', sans-serif !important;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  
+  /* Apply Audiowide to ALL headings */
+  h1, h2, h3, h4, h5, h6, 
+  .font-semibold, .font-bold, .font-medium {
+    font-family: 'Audiowide', monospace !important;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Size hierarchy */
+  h1 { @apply text-4xl md:text-6xl lg:text-7xl; }
+  h2 { @apply text-2xl md:text-3xl lg:text-4xl; }
+  h3 { @apply text-xl md:text-2xl lg:text-3xl; }
+  h4 { @apply text-lg md:text-xl; }
+  
+  /* Apply Exo 2 to ALL body text */
+  p, li, span, div, a, button, input, textarea, 
+  .text-sm, .text-base, .text-lg, .text-xl,
+  .text-muted-foreground {
+    font-family: 'Exo 2', sans-serif !important;
+  }
+  
+  /* Special tech classes */
+  .tech-heading {
+    font-family: 'Audiowide', monospace !important;
+    @apply uppercase tracking-wider;
   }
 }
 
-/* Add custom gradient utilities */
-@layer utilities {
-  .gradient-primary {
-    @apply bg-gradient-to-r from-primary via-secondary to-accent;
-  }
-  
-  .gradient-dark {
-    @apply bg-gradient-to-br from-zinc-900 via-purple-900 to-zinc-900;
-  }
-  
-  .glass-effect {
-    @apply backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10;
-  }
+/* Starfield background (restored) */
+.stars, .stars2, .stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+}
+
+.stars {
+  background-image: 
+    radial-gradient(1px 1px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 60% 70%, white, transparent),
+    radial-gradient(1px 1px at 50% 50%, white, transparent);
+  background-size: 250px 250px;
+  animation: stars 200s linear infinite;
+  opacity: 0.6;
+}
+
+.stars2 {
+  background-image: 
+    radial-gradient(2px 2px at 80% 10%, #a855f7, transparent),
+    radial-gradient(1px 1px at 40% 60%, #3b82f6, transparent);
+  background-size: 350px 350px;
+  animation: stars 300s linear infinite;
+  opacity: 0.4;
+}
+
+.stars3 {
+  background-image: 
+    radial-gradient(1px 1px at 90% 90%, #ec4899, transparent);
+  background-size: 450px 450px;
+  animation: stars 400s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes stars {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-2000px); }
+}
+
+/* Gradient animation */
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 8s ease infinite;
+}
+
+.bg-300\% {
+  background-size: 300%;
 }

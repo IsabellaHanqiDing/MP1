@@ -1,5 +1,4 @@
 import { type Metadata } from 'next'
-
 import { Card } from '@/components/shared/Card'
 import { SimpleLayout } from '@/components/layout/SimpleLayout'
 import { type BlogType, getAllBlogs } from '@/lib/blogs'
