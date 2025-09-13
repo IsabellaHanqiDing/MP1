@@ -1,0 +1,200 @@
+---
+title: 'Game Design Document'
+description: 'This is a test blog'
+date: '2025-02-08'
+---
+
+## Game Overview:
+
+**Title:** Crossing Forest*
+
+**Characters:** little Ghosts
+
+**Genre:** Multiplayer, Online Co-Op, Casual, Action, 2D, Party Game, PvP, Cartoon
+
+**Players:** 3-6 players per match
+
+**Teams:** Hiders vs. Hunter 
+
+**Match Duration:** 3-5 minutes
+
+**Objective:** Hiders must avoid being caught until the timer runs out.
+The Hunter must catch all Hiders before the time expires.
+
+---
+
+## Game Mode Overview
+**Teams-**
+
+Hiders: Avoid getting caught until the timer runs out.
+
+Hunter: Catch all Hiders before the time expires.
+
+**Win Conditions-**
+
+Hiders Win: At least one Hider remains when time expires.
+
+Hunter Wins: All Hiders are caught.
+
+---
+
+## Core Gameplay
+
+**Hiders' Gameplay**
+
+Primary Goal: Avoid being caught by the Hunters.
+
+Basic Actions:
+Move using WASD.
+Use Speed Boost to escape.
+Jump over walls to avoid getting trapped.
+Use abilities like smoke bombs and invisibility.
+Push other players to disrupt movement.
+Interact with objects (e.g., portals, speed zones).
+
+Ultimate Abilities-
+Each Hider can collect and activate one Ultimate Skill per game (must use it to collect another).
+They spawn at random fixed locations on the map.
+
+**Hunters' Gameplay**
+
+Primary Goal: Capture all Hiders before time runs out.
+
+Abilities-
+Higher base movement speed than Hiders.
+Larger vision radius to detect Hiders.
+Can select one ability before the match begins (e.g., tracking vision, temporary movement boost).
+
+Hunting Strategies:
+Predict Hiders’ movements and cut off their escape routes.
+Use environmental traps to slow down Hiders.
+Work with other Hunters to corner and capture players.
+
+---
+
+## Death Mechanics & Ghost Mode
+
+**If a Hider is caught:**
+They are eliminated from the game.
+
+They enter Ghost Mode, where they can move freely and provide small boosts (e.g., speed increase) to remaining teammates.
+Ghosts cannot interact with Hunters or objects directly.
+
+**If the timer runs out:**
+The Hiders win if at least one remains uncaught.
+
+The Hunters win if all Hiders are captured.
+
+---
+
+## Map Features：
+Walls & Obstacles (Blocking movement paths)
+Portals (Teleport players randomly)
+Speed Zones (Increase or decrease speed)
+
+
+
+---
+
+## Advanced Mechanics
+**Pushing Mechanic:**
+Players (both Hunters and Hiders) can push each other to alter movement.
+Can be used offensively (push opponents into obstacles) or defensively (push teammates to safety).
+
+**Hunter Vision Mechanic:**
+Hunters have larger sight range but do not see Hiders if they use certain abilities (e.g., Invisibility).
+
+**Dynamic Environment:**
+Some map elements will change mid-game (e.g., Tornado paths shift, Portals deactivate and reactivate).
+
+---
+
+## Game Flow：
+**Match Starts:** 
+Hunters are frozen for 5 seconds while Hiders escape. (or hiders have 10-20s hiding time)
+
+**Hiders Navigate Map:** 
+Use abilities, portals, and obstacles to evade capture.
+
+**Hunter Chases:** 
+Uses skills to track and capture Hiders.
+
+**Caught Hiders Enter Spectator Mode:** 
+Can boost teammates.
+
+**Game Ends:** 
+If all Hiders are caught, the Hunter wins; otherwise, the Hiders win.
+
+
+---
+
+## User Interface & Scene Design
+
+**Game Interface Screens:**
+
+**Main Menu**
+
+**Player Profile Page (Customization: skins, outfits, etc.)**
+
+**Settings Page**
+
+**Game Process Screens:**
+
+**Lobby Page:**
+Player creates a room, connects online, and other players join.
+Game starts after all are ready (5-second countdown).
+
+**Role Selection Page:**
+Players roll a random identity (3 players: 1 Hunter; 3-6 players: 2 Hunters).
+30-second limit to choose skills.
+If a player does not roll, they get auto-assigned a role/skill 10 seconds before game starts.
+
+**Hiding Phase:**
+Hiders get 20 seconds to find a hiding spot before the game begins.
+
+**Game Screen:**
+Core gameplay, movement, abilities, and interactions.
+
+**Caught Player Screen:**
+Option 1: Camera follows a teammate.
+Option 2: Camera remains on the caught player, allowing limited interactions (e.g., helping teammates with small traps).
+
+**Game End Screen:**
+	Option1:
+Hunter Wins: Ranked by number of captures.
+Hider Wins: Ranked by most ability usage.
+	Option2:
+Victory Screen: Winning team celebration and ranking.(animation)
+
+---
+
+## Tutorial Levels
+There are five introductory levels to teach players the mechanics:
+
+* **Basic Movement & Obstacles:**
+
+Introduces speed boost and blink (teleportation).
+
+* **Portal Usage:**
+Teaches how to use portals.
+
+Ultimate: Random portal exit teleportation.
+
+* **Speed Zones & Stuns:**
+Introduces speed-up and slow-down areas.
+
+Ultimate: Stun opponents.
+
+* **Smoke Bombs & Power Cut:**
+Introduces smoke bombs for evasion.
+
+Ultimate: Power outage (dark screen).
+
+* **Fans & Tornado Mechanics:**
+Introduces wind-based obstacles.
+
+Ultimate: Invisibility.
+
+
+---
+

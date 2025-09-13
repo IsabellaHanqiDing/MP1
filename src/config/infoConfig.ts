@@ -48,7 +48,7 @@ export const aboutParagraphs = [
   "I'm currently focused on game, UIUX and website design.",
   "I started this blog to share the insights I learn every day. Most blogs focus on Game analysis, Game design, website design and interactive art, while others share the life lessons I've learned.",
   "When I'm not designing or coding, I'm making music (Logic Pro, Adobe Audition) or out with my camera capturing everyday stories."
-]
+] 
 
 // ============================================
 // BLOG SECTION
