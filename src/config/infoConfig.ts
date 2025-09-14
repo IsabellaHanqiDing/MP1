@@ -81,15 +81,36 @@ export const projects: Array<ProjectItemType> = [
     name: 'Board Game',
     description: 'Worked with a team to create a fun, accessible board game designed for social play. The game is fully printable—just download the files, print them out, and enjoy with friends.',
     link: { href: 'https://onecompiler.com/challenges/42yf4n5yn/scls-hackathon', label: 'View Project' },
-    tags: ['BoardGame'],
+    tags: ['BoardGame','GroupWork'],
     category: 'board-games'
   },
   {
-    name: 'AI Camp Course Development',
-    description: 'Developed a comprehensive AI curriculum for high school students, incorporating real-world projects and startup concepts.',
-    link: { href: 'https://scls-cs.gitbook.io/ai-camp', label: 'View Course' },
-    tags: ['Education', 'AI'],
+    name: 'Fiigma UI Design',
+    description: 'Conducted research and developed the user interface of a campus app in collaboration with team members.',
+    link: { href: 'https://drive.google.com/drive/folders/1hP0wZQPw2q3LFL_edjThpzfbrDokqwR8?usp=drive_link', label: 'View Project' },
+    tags: ['Figma', 'UI','Excel'],
     category: 'others'
+  },
+  {
+    name: 'Board Game: The World',
+    description: 'A combat - themed board game, accompanied by a detailed gameplay introduction and a video.',
+    link: { href: 'https://drive.google.com/drive/folders/1fFxUqG_PmV519y6nqHiQZyfKSfJPqD2b?usp=drive_link', label: 'View Project' },
+    tags: ['BoardGame','Premiere Pro'],
+    category: 'board-games'
+  },
+  {
+    name: '3D Modeling - Camera',
+    description: 'A 3D camera model created based on real photos, made using Maya.',
+    link: { href: 'https://drive.google.com/file/d/1OZd5I9yNgfvqs5mD2EeTEpw5CNnHyp8O/view?usp=drive_link', label: 'View Project' },
+    tags: ['MAYA','3D MODEL'],
+    category: '3d-modeling'
+  },
+  {
+    name: '3D Modeling - Girl',
+    description: 'A 3D girl model created based on 2d picture, made using Maya.',
+    link: { href: 'https://drive.google.com/file/d/1OZd5I9yNgfvqs5mD2EeTEpw5CNnHyp8O/view?usp=drive_link', label: 'View Project' },
+    tags: ['MAYA','3D MODEL'],
+    category: '3d-modeling'
   }
 ]
 

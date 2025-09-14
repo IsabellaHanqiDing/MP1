@@ -46,22 +46,21 @@ export const activitiesIntro = "Personal interests and community contributions."
 export const activities: Array<ActivityItemType> = [
   {
     name: 'VR Workshop',
-    description: 'Teaching basic Python programming concepts to beginners. Covering variables, control flow, and functions.',
+    description: 'Assist the speaker in explaining basic VR knowledge and help the trainees solve problems.',
     date: '2024-02-24',
-    location: 'Shanghai',
+    location: 'Toronto',
     link: 'https://example.com/python-workshop',
   },
   {
-    name: 'AI Ethics Discussion',
+    name: 'Maker Day',
     description: 'A group discussion about the ethical implications of AI development and its impact on society.',
     date: '2024-03-01',
-    location: 'Shanghai',
-    link: 'https://example.com/ai-ethics',
+    location: 'Toronto',
   },
   {
-    name: 'Code Review Session',
-    description: 'Helping students improve their coding skills through peer code review and best practices sharing.',
-    date: '2024-03-15',
-    location: 'Shanghai',
+    name: 'Level Up Student Showcase',
+    description: 'Volenteer in Level Up Student Showcase. Responsed for assisted judges and attendees, and troubleshot booth issues and maintained event flow during scoring windows. ',
+    date: '2024-04-19',
+    location: 'Toronto',
   },
 ]
