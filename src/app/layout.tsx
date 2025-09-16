@@ -4,6 +4,7 @@ import { Providers } from '@/app/providers'
 import { Layout } from '@/components/layout/Layout'
 import { name, headline, introduction } from '@/config/infoConfig'
 import '@/styles/tailwind.css'
+import CustomCursor from '@/components/ui/CustomCursor'
 
 export const metadata: Metadata = {
   title: {
@@ -18,14 +19,16 @@ export const metadata: Metadata = {
   },
 }
 
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+    <html lang="en" className="h-full antialiased dark" suppressHydrationWarning>
       <body className="flex h-full">
+        <CustomCursor />
         <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>

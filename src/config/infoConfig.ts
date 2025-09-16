@@ -12,6 +12,8 @@ export type ProjectItemType = {
   thumbnail?: string
   downloadLink?: string
   demoLink?: string
+  images?: string[] 
+  thoughts?: string
 }
 
 export type SocialLinkType = {
@@ -68,7 +70,17 @@ export const projects: Array<ProjectItemType> = [
     description: 'Contributed to the development of a Unity-based open-world story-driven game as part of a collaborative team, focusing on game design, narrative writing, and artistic illustration.',
     link: { href: 'https://hahajace.itch.io/dear-diary', label: 'Play Game' },
     tags: ['Unity', 'Maya', 'C#', 'SketchBook'],
-    category: 'video-games'
+    category: 'video-games',    
+    images: [
+      '/images/projects/dear-diary-1.jpg',
+      '/images/projects/dear-diary-2.jpg',
+      '/images/projects/dear-diary-3.jpg'
+    ],
+    thoughts: `This project was a journey into narrative-driven game design. I wanted to create an experience that felt personal and immersive.
+    
+    The biggest challenge was balancing open-world exploration with a cohesive story. We solved this by creating environmental storytelling elements that players could discover at their own pace.
+    
+    Working with a team taught me the importance of clear communication and iterative design. Every week brought new insights that shaped the final product.`
   },
   {
     name: 'Data Visualization',
@@ -107,6 +119,13 @@ export const projects: Array<ProjectItemType> = [
   },
   {
     name: '3D Modeling - Girl',
+    description: 'A 3D girl model created based on 2d picture, made using Maya.',
+    link: { href: 'https://drive.google.com/file/d/1OZd5I9yNgfvqs5mD2EeTEpw5CNnHyp8O/view?usp=drive_link', label: 'View Project' },
+    tags: ['MAYA','3D MODEL'],
+    category: '3d-modeling'
+  },
+  {
+    name: '',
     description: 'A 3D girl model created based on 2d picture, made using Maya.',
     link: { href: 'https://drive.google.com/file/d/1OZd5I9yNgfvqs5mD2EeTEpw5CNnHyp8O/view?usp=drive_link', label: 'View Project' },
     tags: ['MAYA','3D MODEL'],

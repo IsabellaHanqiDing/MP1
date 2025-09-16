@@ -121,3 +121,56 @@
 .bg-300\% {
   background-size: 300%;
 }
+/* Custom Cursor */
+* {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #a855f7;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease;
+  transition-property: width, height, border, transform;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%);
+  box-shadow: 
+    0 0 20px #a855f7,
+    0 0 40px #a855f7,
+    0 0 60px #a855f7;
+}
+
+.custom-cursor-dot {
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor.click {
+  width: 30px;
+  height: 30px;
+  border-color: #ec4899;
+  box-shadow: 
+    0 0 30px #ec4899,
+    0 0 60px #ec4899,
+    0 0 90px #ec4899;
+}
+
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  width: 40px;
+  height: 40px;
+  border-color: #06b6d4;
+  box-shadow: 
+    0 0 30px #06b6d4,
+    0 0 60px #06b6d4;
+}
