@@ -89,7 +89,7 @@ export default function ProjectsPage() {
                   {categoryLabels[category]}
                   {category !== 'all' && (
                     <span className="ml-2 text-xs opacity-70">
-                      ({projects.filter(p => p.name && (category === 'all' || p.category === category)).length})
+                      ({projects.filter(p => p.name && p.category === category).length})
                     </span>
                   )}
                 </span>
