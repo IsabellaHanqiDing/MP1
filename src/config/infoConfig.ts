@@ -72,9 +72,11 @@ export const projects: Array<ProjectItemType> = [
     tags: ['Unity', 'Maya', 'C#', 'SketchBook'],
     category: 'video-games',    
     images: [
-      '/images/projects/dear-diary-1.jpg',
-      '/images/projects/dear-diary-2.jpg',
-      '/images/projects/dear-diary-3.jpg'
+      '/images/projects/dear-diary-1.png',
+      '/images/projects/dear-diary-2.png',
+      '/images/projects/dear-diary-3.png',
+      '/images/projects/dear-diary-4.png',
+      '/images/projects/dear-diary-5.png'
     ],
     thoughts: `This project was a journey into narrative-driven game design. I wanted to create an experience that felt personal and immersive.
     
@@ -83,18 +85,43 @@ export const projects: Array<ProjectItemType> = [
     Working with a team taught me the importance of clear communication and iterative design. Every week brought new insights that shaped the final product.`
   },
   {
-    name: 'Data Visualization',
+    name: 'Data Visualization - Music',
     description: 'Developed a data visualization artwork using p5.js, where different instruments and tracks of a musical piece were represented through distinct visual patterns.',
     link: { href: 'https://editor.p5js.org/hanqi666/sketches/Ly8fRr9-O', label: 'View Demo' },
     tags: ['P5.js', 'Music'],
-    category: 'programming'
+    category: 'programming',
+    images: [
+      '/images/projects/datamusi-0.png',
+      '/images/projects/datamusi-1.png'
+    ],
+    thoughts: `.`
+  },
+    {
+    name: 'Data Visualization - listening preference',
+    description: 'Developed a data visualization artwork using p5.js, where different instruments and tracks of a musical piece were represented through distinct visual patterns.',
+    link: { href: 'https://editor.p5js.org/hanqi666/sketches/GaZ7aE4mV', label: 'View Demo' },
+    tags: ['P5.js', 'Data Visualization','Excel'],
+    category: 'programming',
+    images: [
+      '/images/projects/datalisten-1.png',
+      '/images/projects/datalisten-2.png'
+    ],
+    thoughts: `.`
   },
   {
-    name: 'Board Game',
+    name: 'Board Game: Extraterrestrial Battle',
     description: 'Worked with a team to create a fun, accessible board game designed for social play. The game is fully printable—just download the files, print them out, and enjoy with friends.',
-    link: { href: 'https://onecompiler.com/challenges/42yf4n5yn/scls-hackathon', label: 'View Project' },
+    link: { href: 'https://drive.google.com/drive/folders/1zEEgVlDO0uB2pgUipRHMNMz9p4t1VPf9?usp=drive_link', label: 'View Project' },
     tags: ['BoardGame','GroupWork'],
-    category: 'board-games'
+    category: 'board-games',
+    images: [
+      '/images/projects/Extraterrestrial Battle-1.png',
+      '/images/projects/Extraterrestrial Battle-2.png',
+      '/images/projects/Extraterrestrial Battle-3.png',
+    ],
+    thoughts: `This is a board game designed for both adults and children. The inspiration for its creation comes from a children's picture book called "Mr. Wuffles!". 
+    Players can simply download and print the files to learn about and play this game. 
+    It is suitable for family gatherings.`
   },
   {
     name: 'Fiigma UI Design',
@@ -125,7 +152,7 @@ export const projects: Array<ProjectItemType> = [
     category: '3d-modeling'
   },
   {
-    name: '',
+    name: '2D Painting',
     description: 'A 3D girl model created based on 2d picture, made using Maya.',
     link: { href: 'https://drive.google.com/file/d/1OZd5I9yNgfvqs5mD2EeTEpw5CNnHyp8O/view?usp=drive_link', label: 'View Project' },
     tags: ['MAYA','3D MODEL'],

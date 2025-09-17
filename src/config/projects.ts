@@ -44,23 +44,25 @@ export const activitiesHeadLine = "Hobbies & Volunteer"
 export const activitiesIntro = "Personal interests and community contributions."
 
 export const activities: Array<ActivityItemType> = [
+    {
+    name: 'Maker Day',
+    description: 'Organized and participated in a series of events to work on a selection of fun DIY electronic kits.',
+    date: 'Once a year from 2019 to 2022',
+    location: 'Toronto',
+    link: 'https://linktr.ee/dmsayorku?fbclid=PAdGRjcAM2369leHRuA2FlbQIxMQABpykN7FgbTFAPU-VWuiAOM_FHmyTpuexzsVxTuLVyUSTJCvz73gqG1w9C0Y1T_aem_LXBbWNHWCThFn3gQfyXOSw',
+  },
   {
     name: 'VR Workshop',
     description: 'Assist the speaker in explaining basic VR knowledge and help the trainees solve problems.',
-    date: '2024-02-24',
+    date: '2021-11-19',
     location: 'Toronto',
-    link: 'https://example.com/python-workshop',
-  },
-  {
-    name: 'Maker Day',
-    description: 'A group discussion about the ethical implications of AI development and its impact on society.',
-    date: '2024-03-01',
-    location: 'Toronto',
+    
   },
   {
     name: 'Level Up Student Showcase',
     description: 'Volenteer in Level Up Student Showcase. Responsed for assisted judges and attendees, and troubleshot booth issues and maintained event flow during scoring windows. ',
     date: '2024-04-19',
     location: 'Toronto',
+    link: 'https://www.instagram.com/leveluptostudentshowcase?igsh=ejNjYmllcDczaTR3',
   },
 ]

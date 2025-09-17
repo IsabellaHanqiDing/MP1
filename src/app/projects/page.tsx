@@ -1,189 +1,133 @@
-// src/app/projects/[slug]/page.tsx
+// src/app/projects/page.tsx
+'use client'
+
+import { useState } from 'react'
 import { type Metadata } from 'next'
-import { notFound } from 'next/navigation'
 import { Container } from '@/components/layout/Container'
-import { projects } from '@/config/infoConfig'
-import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowLeft, ExternalLink, Download, Play } from 'lucide-react'
+import { ProjectCard } from '@/components/project/ProjectCard'
+import { projects, projectHeadLine, projectIntro } from '@/config/infoConfig'
+import { Briefcase, Filter } from 'lucide-react'
 
-interface Props {
-  params: {
-    slug: string
-  }
-}
+type CategoryType = 'all' | 'video-games' | 'board-games' | '3d-modeling' | '2d-arts' | 'programming' | 'others'
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const project = projects.find(p => 
-    p.name.toLowerCase().replace(/\s+/g, '-') === params.slug
-  )
+export default function ProjectsPage() {
+  const [selectedCategory, setSelectedCategory] = useState<CategoryType>('all')
   
-  if (!project) {
-    return {
-      title: 'Project not found',
-    }
+  const categoryLabels = {
+    'all': 'All Projects',
+    'video-games': 'Video Games',
+    'board-games': 'Board Games',
+    '3d-modeling': '3D Modeling',
+    '2d-arts': '2D Arts',
+    'programming': 'Programming',
+    'others': 'Others'
   }
 
-  return {
-    title: project.name,
-    description: project.description,
+  const categoryIcons = {
+    'all': '🌟',
+    'video-games': '🎮',
+    'board-games': '🎲',
+    '3d-modeling': '🎨',
+    '2d-arts': '🖼️',
+    'programming': '💻',
+    'others': '✨'
   }
-}
 
-export default function ProjectDetailPage({ params }: Props) {
-  const project = projects.find(p => 
-    p.name.toLowerCase().replace(/\s+/g, '-') === params.slug
-  )
-  
-  if (!project) {
-    notFound()
-  }
+  // Filter projects based on selected category
+  const filteredProjects = selectedCategory === 'all' 
+    ? projects.filter(p => p.name) // Filter out projects with empty names
+    : projects.filter(p => p.name && p.category === selectedCategory)
+
+  // Get unique categories that have projects
+  const availableCategories = ['all', ...new Set(projects.filter(p => p.name).map(p => p.category || 'others'))] as CategoryType[]
 
   return (
     <>
-      {/* Background */}
+      {/* Starfield Background */}
       <div className="fixed inset-0 z-0">
         <div className="stars"></div>
         <div className="stars2"></div>
         <div className="stars3"></div>
       </div>
+      
+      <Container className="mt-16 sm:mt-32 relative z-10">
+        {/* Header */}
+        <div className="max-w-2xl mb-12">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl tech-heading uppercase">
+            {projectHeadLine}
+          </h1>
+          <p className="mt-6 text-lg text-white/70">
+            {projectIntro}
+          </p>
+        </div>
 
-      <Container className="mt-16 relative z-10">
-        {/* Back Button */}
-        <Link
-          href="/projects"
-          className="inline-flex items-center gap-2 text-purple-400 hover:text-pink-400 transition-colors mb-8"
-        >
-          <ArrowLeft size={20} />
-          <span className="tech-heading">Back to Projects</span>
-        </Link>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column - Images */}
-          <div className="space-y-6">
-            {/* Main Image */}
-            <div className="rounded-lg overflow-hidden border-2 border-purple-500/30 bg-gradient-to-br from-purple-900/20 to-pink-900/20">
-              {project.images && project.images[0] ? (
-                <Image
-                  src={project.images[0]}
-                  alt={project.name}
-                  width={800}
-                  height={600}
-                  className="w-full h-auto"
-                />
-              ) : (
-                <div className="w-full h-96 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-pink-900/20">
-                  <span className="text-4xl">🎮</span>
-                </div>
-              )}
-            </div>
-
-            {/* Additional Images Gallery */}
-            {project.images && project.images.length > 1 && (
-              <div className="grid grid-cols-2 gap-4">
-                {project.images.slice(1).map((image, index) => (
-                  <div key={index} className="rounded-lg overflow-hidden border border-purple-500/20">
-                    <Image
-                      src={image}
-                      alt={`${project.name} ${index + 2}`}
-                      width={400}
-                      height={300}
-                      className="w-full h-auto hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
+        {/* Category Filter Bar */}
+        <div className="mb-12 relative">
+          <div className="flex items-center gap-3 mb-6">
+            <Filter className="text-purple-400" size={24} />
+            <h2 className="text-xl font-bold text-white tech-heading uppercase">
+              Filter by Category
+            </h2>
           </div>
-
-          {/* Right Column - Details */}
-          <div className="space-y-6">
-            {/* Title & Category */}
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <h1 className="text-4xl font-bold text-white tech-heading uppercase">
-                  {project.name}
-                </h1>
-                <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold uppercase rounded">
-                  {project.category?.replace('-', ' ')}
-                </span>
-              </div>
-              
-              {/* Description */}
-              <p className="text-lg text-white/80 leading-relaxed">
-                {project.description}
-              </p>
-            </div>
-
-            {/* My Thoughts Section */}
-            {project.thoughts && (
-              <div className="p-6 rounded-lg bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20">
-                <h2 className="text-2xl font-bold text-cyan-400 mb-4 tech-heading">
-                  My Thoughts
-                </h2>
-                <div className="text-white/70 space-y-4">
-                  {project.thoughts.split('\n').map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Tech Stack */}
-            {project.tags && project.tags.length > 0 && (
-              <div>
-                <h3 className="text-xl font-bold text-purple-400 mb-4 tech-heading">
-                  Technologies Used
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="px-4 py-2 text-sm uppercase rounded bg-cyan-900/30 text-cyan-400 border border-cyan-600/30 tech-heading"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 pt-6">
-              <a
-                href={project.link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold uppercase rounded-lg hover:scale-105 transition-all duration-200 shadow-lg"
+          
+          <div className="flex flex-wrap gap-3">
+            {availableCategories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`
+                  px-6 py-3 rounded-lg font-bold uppercase transition-all duration-300 tech-heading
+                  flex items-center gap-2
+                  ${selectedCategory === category 
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/30 scale-105' 
+                    : 'bg-purple-900/20 text-purple-400 border border-purple-500/30 hover:bg-purple-900/40 hover:border-purple-400/50'
+                  }
+                `}
               >
-                <ExternalLink size={18} />
-                View Project
-              </a>
-              
-              {project.demoLink && (
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold uppercase rounded-lg hover:scale-105 transition-all duration-200 shadow-lg"
-                >
-                  <Play size={18} />
-                  Play Demo
-                </a>
-              )}
-              
-              {project.downloadLink && (
-                <a
-                  href={project.downloadLink}
-                  download
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white font-bold uppercase rounded-lg hover:scale-105 transition-all duration-200 shadow-lg"
-                >
-                  <Download size={18} />
-                  Download
-                </a>
-              )}
-            </div>
+                <span className="text-xl">{categoryIcons[category]}</span>
+                <span className="text-sm">
+                  {categoryLabels[category]}
+                  {category !== 'all' && (
+                    <span className="ml-2 text-xs opacity-70">
+                      ({projects.filter(p => p.name && (category === 'all' || p.category === category)).length})
+                    </span>
+                  )}
+                </span>
+              </button>
+            ))}
           </div>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="relative">
+          {/* Category Header */}
+          <div className="mb-8 pb-4 border-b border-purple-500/30">
+            <h2 className="flex items-center gap-3 text-2xl font-bold tech-heading">
+              <span className="text-3xl">{categoryIcons[selectedCategory]}</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
+                {categoryLabels[selectedCategory]}
+              </span>
+              <span className="ml-auto text-base text-purple-400 font-normal">
+                {filteredProjects.length} {filteredProjects.length === 1 ? 'Project' : 'Projects'}
+              </span>
+            </h2>
+          </div>
+
+          {/* Projects */}
+          {filteredProjects.length > 0 ? (
+            <ul
+              role="list"
+              className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
+            >
+              {filteredProjects.map((project) => (
+                <ProjectCard key={project.name} project={project} titleAs='h3'/>
+              ))}
+            </ul>
+          ) : (
+            <div className="text-center py-16">
+              <p className="text-xl text-white/50">No projects found in this category.</p>
+            </div>
+          )}
         </div>
       </Container>
     </>
