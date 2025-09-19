@@ -242,7 +242,7 @@ layers of the dress.`
     tags: ['Procreate','2D Arts'],
     category: '2d-arts',
          images: [
-      '/images/projects/flowers.png',
+      '/images/projects/flowers.PNG',
     ],
     thoughts: ``
   },
@@ -264,7 +264,7 @@ layers of the dress.`
     tags: ['Procreate','2D Arts'],
     category: '2d-arts',
          images: [
-      '/images/projects/Willow trees and swallows.png',
+      '/images/projects/Willow trees and swallows.PNG',
     ],
     thoughts: ``
   }
