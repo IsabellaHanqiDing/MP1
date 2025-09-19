@@ -1,4 +1,4 @@
-// src/components/home/Education.tsx
+// src/components/home/Education.tsx - COMPLETE REPLACEMENT
 'use client'
 
 import { GraduationCap, Calendar } from 'lucide-react'
@@ -7,21 +7,66 @@ import { type EducationItemType, educationList } from '@/config/infoConfig'
 function EducationItem({ educationItem }: { educationItem: EducationItemType }) {
   return (
     <li className="group relative">
-      <div className="flex gap-4 p-4 rounded-lg bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/20 hover:border-cyan-400/40 transition-all duration-300">
-        <div className="relative flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-gradient-to-br from-cyan-600/20 to-blue-600/20 border border-cyan-500/30">
-          <GraduationCap size={20} className="text-cyan-400" />
+      <div style={{
+        display: 'flex',
+        gap: '16px',
+        padding: '16px',
+        borderRadius: '15px',
+        backgroundColor: '#fcebe4',
+        border: '2px solid #9cd6ef',
+        transition: 'all 0.3s ease'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = '#338bcc';
+        e.currentTarget.style.boxShadow = '3px 3px 0px #338bcc';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = '#9cd6ef';
+        e.currentTarget.style.boxShadow = 'none';
+      }}>
+        
+        <div style={{
+          position: 'relative',
+          display: 'flex',
+          height: '48px',
+          width: '48px',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: '12px',
+          backgroundColor: '#338bcc'
+        }}>
+          <GraduationCap size={20} style={{ color: '#fcebe4' }} />
         </div>
-        <dl className="flex flex-auto flex-wrap gap-x-2">
+        
+        <dl style={{ display: 'flex', flex: 1, flexWrap: 'wrap', gap: '8px' }}>
           <dt className="sr-only">School</dt>
-          <dd className="w-full flex-none text-sm text-white uppercase tracking-wider tech-heading">
+          <dd style={{
+            width: '100%',
+            fontSize: '0.875rem',
+            color: '#d92f2f',
+            fontFamily: 'Kalam, cursive'
+          }}>
             {educationItem.school}
           </dd>
+          
           <dt className="sr-only">Major</dt>
-          <dd className="text-xs text-cyan-400">
+          <dd style={{
+            fontSize: '0.75rem',
+            color: '#9cd6ef',
+            fontFamily: 'Mali, serif'
+          }}>
             {educationItem.major}
           </dd>
+          
           <dt className="sr-only">Date</dt>
-          <dd className="ml-auto text-xs text-purple-400 flex items-center gap-1">
+          <dd style={{
+            marginLeft: 'auto',
+            fontSize: '0.75rem',
+            color: '#338bcc',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px'
+          }}>
             <Calendar size={12} />
             {educationItem.start} - {educationItem.end}
           </dd>
@@ -33,27 +78,38 @@ function EducationItem({ educationItem }: { educationItem: EducationItemType }) 
 
 export default function Education() {
   return (
-    <div className="relative rounded-lg overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(cyan 1px, transparent 1px), linear-gradient(90deg, cyan 1px, transparent 1px)`,
-          backgroundSize: '20px 20px'
-        }}></div>
-      </div>
+    <div style={{
+      position: 'relative',
+      borderRadius: '25px',
+      overflow: 'hidden',
+      backgroundColor: '#fcebe4',
+      border: '3px dashed #338bcc',
+      padding: '24px'
+    }}>
+      <h2 style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '12px',
+        fontSize: '1.2rem',
+        marginBottom: '24px',
+        color: '#d92f2f',
+        fontFamily: 'Kalam, cursive'
+      }}>
+        <div style={{
+          padding: '8px',
+          borderRadius: '10px',
+          backgroundColor: '#338bcc'
+        }}>
+          <GraduationCap size={20} style={{ color: '#fcebe4' }} />
+        </div>
+        <span>Academic Journey</span>
+      </h2>
       
-      <div className="relative rounded-lg bg-gradient-to-br from-blue-900/10 to-purple-900/10 backdrop-blur border border-blue-500/20 p-6">
-        <h2 className="flex items-center gap-3 text-lg uppercase tracking-wider mb-6 tech-heading">
-          <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-600/20 to-blue-600/20 border border-cyan-500/30">
-            <GraduationCap size={20} className="text-cyan-400" />
-          </div>
-          <span className="text-white">Academic <span className="text-cyan-400">Journey</span></span>
-        </h2>
-        <ol className="space-y-4">
-          {educationList.map((educationItem, index) => (
-            <EducationItem key={index} educationItem={educationItem} />
-          ))}
-        </ol>
-      </div>
+      <ol style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        {educationList.map((educationItem, index) => (
+          <EducationItem key={index} educationItem={educationItem} />
+        ))}
+      </ol>
     </div>
   )
 }

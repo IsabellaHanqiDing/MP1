@@ -20,9 +20,10 @@ export function Providers({ children }: { children: React.ReactNode }) {
   let pathname = usePathname()
   let previousPathname = usePrevious(pathname)
   
-  // Force dark mode on mount
+  // Remove dark mode forcing
   useEffect(() => {
-    document.documentElement.classList.add('dark')
+    document.documentElement.classList.remove('dark')
+    document.documentElement.classList.add('light')
   }, [])
 
   return (

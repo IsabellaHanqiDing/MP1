@@ -1,4 +1,5 @@
-// src/components/home/BlogCard.tsx
+// src/components/home/BlogCard.tsx - COMPLETE REPLACEMENT
+"use client"
 import { formatDate } from '@/lib/formatDate'
 import { type BlogType } from '@/lib/blogs'
 import { FileText, Calendar, ArrowRight } from 'lucide-react'
@@ -8,35 +9,83 @@ export function BlogCard({ blog, titleAs }: { blog: BlogType, titleAs?: keyof JS
   
   return (
     <article className="group relative">
-      <div className="relative overflow-hidden rounded-lg bg-gradient-to-br from-purple-900/10 to-pink-900/10 p-6 backdrop-blur border border-purple-500/20 hover:border-pink-400/40 transition-all duration-300">
-        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500"></div>
+      <div style={{
+        backgroundColor: '#fcebe4',
+        border: '3px dashed #9cd6ef',
+        borderRadius: '20px',
+        padding: '24px',
+        transition: 'all 0.3s ease'
+      }}
+      className="hover:scale-105"
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'rotate(-2deg) scale(1.05)';
+        e.currentTarget.style.boxShadow = '5px 5px 0px #338bcc';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'rotate(0) scale(1)';
+        e.currentTarget.style.boxShadow = 'none';
+      }}>
         
-        <div className="flex items-start gap-4 mb-4">
-          <div className="p-2 rounded-lg bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30">
-            <FileText size={20} className="text-purple-400" />
+        <div style={{ display: 'flex', alignItems: 'start', gap: '16px', marginBottom: '16px' }}>
+          <div style={{
+            padding: '8px',
+            borderRadius: '12px',
+            backgroundColor: '#338bcc',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <FileText size={20} style={{ color: '#fcebe4' }} />
           </div>
-          <div className="flex-1">
-            <a href={`/blogs/${blog.slug}`} className="block group-hover:text-pink-300 transition-colors">
-              <Component className="text-lg text-white uppercase tracking-wider mb-2 tech-heading">
+          
+          <div style={{ flex: 1 }}>
+            <a href={`/blogs/${blog.slug}`}>
+              <Component style={{
+                color: '#d92f2f',
+                fontSize: '1.2rem',
+                fontFamily: 'Kalam, cursive',
+                marginBottom: '8px'
+              }}>
                 {blog.title}
               </Component>
             </a>
-            <div className="flex items-center gap-2 text-xs text-purple-400 mb-3">
-              <Calendar size={12} />
+            
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              fontSize: '0.75rem',
+              color: '#9cd6ef',
+              marginBottom: '12px'
+            }}>
+              <Calendar size={12} style={{ color: '#9cd6ef' }} />
               <time dateTime={blog.date}>{formatDate(blog.date)}</time>
             </div>
           </div>
         </div>
         
-        <p className="text-sm text-white/60 leading-relaxed mb-4">
+        <p style={{
+          fontSize: '0.9rem',
+          color: '#9cd6ef',
+          lineHeight: '1.6',
+          marginBottom: '16px',
+          fontFamily: 'Mali, serif'
+        }}>
           {blog.description}
         </p>
         
         <a 
           href={`/blogs/${blog.slug}`}
-          className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-cyan-400 hover:text-cyan-300 transition-colors tech-heading"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            fontSize: '0.85rem',
+            color: '#338bcc',
+            fontFamily: 'Kalam, cursive'
+          }}
         >
-          Read Article <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+          Read Article <ArrowRight size={14} />
         </a>
       </div>
     </article>

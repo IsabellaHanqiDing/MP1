@@ -75,6 +75,33 @@ export function ProjectCard({ project, titleAs }: { project: ProjectItemType, ti
                 )}
               </div>
             )}
+
+<div className="card-cute group">
+  {/* Add cute emoji decorations */}
+  <div className="absolute -top-4 -right-4 text-3xl animate-bounce-slow">
+    {categoryIcons[project.category]}
+  </div>
+  
+  <Component className="text-xl font-bold mb-3 text-primary">
+    {project.name}
+  </Component>
+  
+  <p className="text-sm text-muted-foreground mb-4">
+    {project.description}
+  </p>
+  
+  {/* Cute tags */}
+  <div className="flex flex-wrap gap-2">
+    {project.tags.map((tag, index) => (
+      <span
+        key={index}
+        className="px-3 py-1 text-xs rounded-full bg-secondary text-white"
+      >
+        {tag}
+      </span>
+    ))}
+  </div>
+</div>
             
             <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-purple-400 group-hover:text-pink-400 transition-colors tech-heading">
               View Details <ArrowUpRight size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

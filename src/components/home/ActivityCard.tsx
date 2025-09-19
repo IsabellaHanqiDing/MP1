@@ -1,4 +1,4 @@
-// src/components/home/ActivityCard.tsx
+// src/components/home/ActivityCard.tsx - COMPLETE REPLACEMENT
 "use client"
 
 import { Calendar, Clock, MapPin } from 'lucide-react'
@@ -10,32 +10,63 @@ export function ActivityCard({ activity, titleAs }: { activity: ActivityItemType
   
   return (
     <li className='group relative'>
-      <div className="relative h-full overflow-hidden rounded-lg bg-gradient-to-br from-blue-900/10 to-purple-900/10 p-6 backdrop-blur border border-blue-500/20 hover:border-purple-400/40 transition-all duration-300 hover:shadow-[0_0_30px_rgba(147,51,234,0.15)]">
-        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500"></div>
+      <div style={{
+        position: 'relative',
+        height: '100%',
+        overflow: 'hidden',
+        borderRadius: '20px',
+        backgroundColor: '#fcebe4',
+        padding: '24px',
+        border: '3px dashed #338bcc',
+        transition: 'all 0.3s ease'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'rotate(1deg)';
+        e.currentTarget.style.boxShadow = '4px 4px 0px #9cd6ef';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'rotate(0)';
+        e.currentTarget.style.boxShadow = 'none';
+      }}>
         
-        <div className='space-y-4'>
-          <div className='flex items-center gap-3'>
-            <div className="p-2 rounded-lg bg-purple-600/20 border border-purple-400/30">
-              <Calendar size={16} className="text-purple-400" />
+        <div style={{ marginBottom: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{
+              padding: '8px',
+              borderRadius: '10px',
+              backgroundColor: '#338bcc'
+            }}>
+              <Calendar size={16} style={{ color: '#fcebe4' }} />
             </div>
-            <Component className="text-base font-medium text-white">
+            <Component style={{
+              fontSize: '1rem',
+              fontWeight: '600',
+              color: '#d92f2f',
+              fontFamily: 'Kalam, cursive'
+            }}>
               {activity.name}
             </Component>
           </div>
-          
-          <p className="text-sm text-white/60 leading-relaxed font-light">
-            {activity.description}
-          </p>
-          
-          <div className='flex items-center gap-4 text-xs'>
-            <div className="flex items-center gap-1.5">
-              <Clock size={12} className="text-blue-400" /> 
-              <span className="text-blue-300">{activity.date}</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <MapPin size={12} className="text-purple-400" /> 
-              <span className="text-purple-300">{activity.location}</span>
-            </div>
+        </div>
+        
+        <p style={{
+          fontSize: '0.875rem',
+          color: '#9cd6ef',
+          lineHeight: '1.6',
+          fontFamily: 'Mali, serif',
+          marginBottom: '16px'
+        }}>
+          {activity.description}
+        </p>
+        
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '0.75rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Clock size={12} style={{ color: '#338bcc' }} /> 
+            <span style={{ color: '#9cd6ef' }}>{activity.date}</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <MapPin size={12} style={{ color: '#338bcc' }} /> 
+            <span style={{ color: '#9cd6ef' }}>{activity.location}</span>
           </div>
         </div>
         
@@ -44,7 +75,11 @@ export function ActivityCard({ activity, titleAs }: { activity: ActivityItemType
             href={activity.link}
             target='_blank'
             rel='noopener noreferrer'
-            className='absolute inset-0 z-20'
+            style={{
+              position: 'absolute',
+              inset: 0,
+              zIndex: 20
+            }}
           />
         )}
       </div>

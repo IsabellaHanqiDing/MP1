@@ -1,5 +1,5 @@
 /* src/styles/tailwind.css */
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&family=Caveat:wght@400;700&family=Mali:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,170 +7,123 @@
 
 @layer base {
   :root {
-    --background: 220 50% 4%;
-    --foreground: 0 0% 100%;
-    --card: 220 50% 7%;
-    --card-foreground: 0 0% 100%;
-    --popover: 220 50% 7%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 280 85% 65%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 200 100% 50%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 220 30% 12%;
-    --muted-foreground: 0 0% 70%;
-    --accent: 330 100% 65%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 280 30% 15%;
-    --input: 220 50% 10%;
-    --ring: 280 85% 65%;
-    --radius: 0.5rem;
+    /* Cute Cartoon Color Palette */
+    --background: #F6EBDE;
+    --foreground: #d92f2f;
+    --card: #fcebe4;
+    --card-foreground: #d92f2f;
+    --popover: #ffffff;
+    --popover-foreground: #d92f2f;
+    --primary: #d92f2f;
+    --primary-foreground: #ffffff;
+    --secondary: #9cd56e;
+    --secondary-foreground: #ffffff;
+    --muted: #fcebe4;
+    --muted-foreground: #338bcc;
+    --accent: #338bcc;
+    --accent-foreground: #ffffff;
+    --destructive: #ff6b6b;
+    --destructive-foreground: #ffffff;
+    --border: #338bcc;
+    --input: #ffffff;
+    --ring: #d92f2f;
+    --radius: 1.5rem;
   }
   
-  /* Force dark mode */
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, #0a0a15 0%, #15051a 50%, #0a0a15 100%);
-    font-family: 'Exo 2', sans-serif !important;
-    font-weight: 400;
-    letter-spacing: 0.02em;
+    background: #F6EBDE;
+    background-image: 
+      radial-gradient(circle at 20% 20%, rgba(255, 182, 193, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(156, 213, 110, 0.2) 0%, transparent 50%);
+    font-family: 'Mali', 'Caveat', Georgia, serif !important;
   }
   
-  /* Apply Audiowide to ALL headings */
-  h1, h2, h3, h4, h5, h6, 
-  .font-semibold, .font-bold, .font-medium {
-    font-family: 'Audiowide', monospace !important;
-    letter-spacing: 0.05em;
+  /* Remove dark mode forcing */
+  .dark {
+    display: none;
   }
   
-  /* Size hierarchy */
-  h1 { @apply text-4xl md:text-6xl lg:text-7xl; }
-  h2 { @apply text-2xl md:text-3xl lg:text-4xl; }
-  h3 { @apply text-xl md:text-2xl lg:text-3xl; }
-  h4 { @apply text-lg md:text-xl; }
-  
-  /* Apply Exo 2 to ALL body text */
-  p, li, span, div, a, button, input, textarea, 
-  .text-sm, .text-base, .text-lg, .text-xl,
-  .text-muted-foreground {
-    font-family: 'Exo 2', sans-serif !important;
+  /* Cute typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kalam', 'Patrick Hand', cursive !important;
+    @apply text-primary;
+    text-shadow: 2px 2px 0px rgba(252, 235, 228, 0.8);
   }
   
-  /* Special tech classes */
+  /* Remove tech styling */
   .tech-heading {
-    font-family: 'Audiowide', monospace !important;
-    @apply uppercase tracking-wider;
+    font-family: 'Kalam', 'Patrick Hand', cursive !important;
+    text-transform: none;
+    letter-spacing: normal;
   }
 }
 
-/* Starfield background (restored) */
+/* Remove starfield backgrounds */
 .stars, .stars2, .stars3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  pointer-events: none;
+  display: none !important;
 }
 
-.stars {
-  background-image: 
-    radial-gradient(1px 1px at 20% 30%, white, transparent),
-    radial-gradient(1px 1px at 60% 70%, white, transparent),
-    radial-gradient(1px 1px at 50% 50%, white, transparent);
-  background-size: 250px 250px;
-  animation: stars 200s linear infinite;
-  opacity: 0.6;
+/* Cute card styles */
+.card-cute {
+  @apply bg-white rounded-3xl p-6 shadow-lg;
+  border: 3px dashed #338bcc;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.stars2 {
-  background-image: 
-    radial-gradient(2px 2px at 80% 10%, #a855f7, transparent),
-    radial-gradient(1px 1px at 40% 60%, #3b82f6, transparent);
-  background-size: 350px 350px;
-  animation: stars 300s linear infinite;
-  opacity: 0.4;
+.card-cute:hover {
+  transform: rotate(2deg) scale(1.05);
+  box-shadow: 8px 8px 0px rgba(51, 139, 204, 0.3);
 }
 
-.stars3 {
-  background-image: 
-    radial-gradient(1px 1px at 90% 90%, #ec4899, transparent);
-  background-size: 450px 450px;
-  animation: stars 400s linear infinite;
-  opacity: 0.3;
+/* Cute buttons */
+.btn-cute {
+  @apply rounded-full px-6 py-3 font-bold;
+  background: linear-gradient(145deg, #FFB6C1, #fcebe4);
+  border: 3px solid #338bcc;
+  transition: all 0.3s ease;
 }
 
-@keyframes stars {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-2000px); }
+.btn-cute:hover {
+  transform: translateY(-3px) rotate(2deg);
+  background: linear-gradient(145deg, #FFD700, #FFB6C1);
 }
 
-/* Gradient animation */
-@keyframes gradient {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+/* Sticker container for home and about pages */
+.sticker-container {
+  @apply relative p-8 my-8;
+  min-height: 200px;
 }
 
-.animate-gradient {
-  animation: gradient 8s ease infinite;
+.sticker-slot {
+  @apply absolute w-24 h-24 rounded-full flex items-center justify-center;
+  border: 3px dashed #9cd56e;
+  background: rgba(255, 255, 255, 0.5);
+  font-family: 'Kalam', cursive;
+  color: #9cd56e;
+  font-size: 12px;
 }
 
-.bg-300\% {
-  background-size: 300%;
-}
-/* Custom Cursor */
-* {
-  cursor: none !important;
+/* Remove custom cursor */
+.custom-cursor, .custom-cursor-dot {
+  display: none !important;
 }
 
-.custom-cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #a855f7;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: all 0.1s ease;
-  transition-property: width, height, border, transform;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%);
-  box-shadow: 
-    0 0 20px #a855f7,
-    0 0 40px #a855f7,
-    0 0 60px #a855f7;
+/* Animations */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
 }
 
-.custom-cursor-dot {
-  width: 4px;
-  height: 4px;
-  background: #fff;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 10000;
-  transform: translate(-50%, -50%);
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-.custom-cursor.click {
-  width: 30px;
-  height: 30px;
-  border-color: #ec4899;
-  box-shadow: 
-    0 0 30px #ec4899,
-    0 0 60px #ec4899,
-    0 0 90px #ec4899;
+.animate-wiggle {
+  animation: wiggle 4s infinite ease-in-out;
 }
 
-a:hover ~ .custom-cursor,
-button:hover ~ .custom-cursor {
-  width: 40px;
-  height: 40px;
-  border-color: #06b6d4;
-  box-shadow: 
-    0 0 30px #06b6d4,
-    0 0 60px #06b6d4;
+.animate-bounce-slow {
+  animation: bounce 3s infinite ease-in-out;
 }

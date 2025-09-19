@@ -80,23 +80,26 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Awards Section - Same as before */}
-        {awards && awards.length > 0 && (
-          <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-purple-800/30">
-            <h2 className="flex flex-row items-center justify-start gap-3 text-xl md:text-3xl mb-4 tech-heading">
-              <Award size={24} className="text-purple-400"/>
-              <span className="text-white uppercase">{awardsHeadLine || 'Awards & Honors'}</span>
-            </h2>
-            <ul
-              role="list"
-              className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
-            >
-              {awards.map((award) => (
-                <ActivityCard key={award.name} activity={award} titleAs='h3'/>
-              ))}
-            </ul>
-          </div>
-        )}
+
+        {/* Sticker Container Section */}
+<div className="sticker-container bg-white rounded-3xl my-12">
+  <div className="sticker-slot" style={{ top: '20px', left: '50px', transform: 'rotate(-15deg)' }}>
+    {/* Your sticker here */}
+    Add Sticker
+  </div>
+  <div className="sticker-slot" style={{ top: '80px', right: '100px', transform: 'rotate(10deg)' }}>
+    Add Sticker
+  </div>
+  <div className="sticker-slot" style={{ bottom: '30px', left: '150px', transform: 'rotate(-20deg)' }}>
+    Add Sticker
+  </div>
+  
+  {/* Your existing content goes here */}
+  <h2 className="text-3xl animate-wiggle text-center mb-8">
+    Welcome to My Cute World! 🌈
+  </h2>
+</div>
+
 
         {/* Projects Section - NOW WITH ONLY 3 PROJECTS */}
         {featuredProjects && featuredProjects.length > 0 && (
@@ -129,7 +132,23 @@ export default async function Home() {
             </div>
           </div>
         )}
-
+ {/* Awards Section - Same as before */}
+        {awards && awards.length > 0 && (
+          <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-purple-800/30">
+            <h2 className="flex flex-row items-center justify-start gap-3 text-xl md:text-3xl mb-4 tech-heading">
+              <Award size={24} className="text-purple-400"/>
+              <span className="text-white uppercase">{awardsHeadLine || 'Awards & Honors'}</span>
+            </h2>
+            <ul
+              role="list"
+              className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
+            >
+              {awards.map((award) => (
+                <ActivityCard key={award.name} activity={award} titleAs='h3'/>
+              ))}
+            </ul>
+          </div>
+        )}
         {/* Activities Section - Same as before */}
         {activities && activities.length > 0 && (
           <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-purple-800/30">
@@ -150,6 +169,7 @@ export default async function Home() {
             </ul>
           </div>
         )}
+
 
         {/* Blog Section - Same as before */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 py-8 my-8 lg:max-w-none border-t border-purple-800/30">
@@ -174,5 +194,7 @@ export default async function Home() {
         </div>
       </Container>
     </>
+    
   )
+         
 }
