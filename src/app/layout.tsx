@@ -4,7 +4,6 @@ import { Providers } from '@/app/providers'
 import { Layout } from '@/components/layout/Layout'
 import { name, headline, introduction } from '@/config/infoConfig'
 import '@/styles/tailwind.css'
-// Remove CustomCursor import
 
 export const metadata: Metadata = {
   title: {
@@ -24,8 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body className="flex h-full" style={{ backgroundColor: '#F6EBDE' }}>
-        {/* Removed CustomCursor */}
+      <body className="flex h-full" style={{ backgroundColor: '#fff2df' }}>
         <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>
