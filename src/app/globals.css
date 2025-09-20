@@ -1,0 +1,96 @@
+/* src/app/globals.css */
+
+/* ===== Design tokens (only these three colors are used) ===== */
+:root{
+  --brand-blue: #015697;   /* primary background */
+  --brand-cream: #fcebe4;  /* requested text color */
+  --brand-brown: #8B4513;  /* kept if you still use brown lines elsewhere */
+
+  /* shadcn/ui semantic tokens so all components follow automatically */
+  --background: var(--brand-blue);
+  --foreground: var(--brand-cream);
+
+  --primary: var(--brand-blue);
+  --primary-foreground: var(--brand-cream);
+
+  --secondary: var(--brand-blue);
+  --secondary-foreground: var(--brand-cream);
+
+  --accent: var(--brand-blue);
+  --accent-foreground: var(--brand-cream);
+
+  --muted: var(--brand-blue);
+  --muted-foreground: var(--brand-cream);
+
+  --popover: var(--brand-blue);
+  --popover-foreground: var(--brand-cream);
+
+  --card: var(--brand-blue);
+  --card-foreground: var(--brand-cream);
+
+  --border: var(--brand-cream);
+  --input: var(--brand-cream);
+  --ring: var(--brand-cream);
+
+  --radius: 0.75rem;
+  --border-thick: 4px; /* thicker lines */
+}
+
+/* ===== Base typography (uniform) ===== */
+html,body{min-height:100%}
+body{
+  margin:0;
+  background:var(--background);
+  color:var(--foreground);
+  font-family:var(--font-body);
+}
+h1,h2,h3,.headline,.tech-heading{font-family:var(--font-headline)}
+
+/* ===== Page wrappers (all pages now share blue bg + cream text) ===== */
+.home-theme,
+.page--dark,
+.projects-theme{background:var(--brand-blue);color:var(--brand-cream)}
+/* keep white dotted hover outlines you already use elsewhere */
+button,.btn,a,.hoverable{
+  transition:transform .2s ease,box-shadow .2s ease,outline-color .2s ease,border-color .2s ease,background-color .2s ease,color .2s ease;
+}
+button:hover,.btn:hover,a:hover,.hoverable:hover{
+  transform:translateY(-2px);
+  outline:2px dotted #ffffff; /* white dotted hover retained */
+  outline-offset:2px;
+}
+
+/* ===== Home “box” sections now dark-blue with cream text ===== */
+.box--home{
+  background:var(--brand-blue);
+  color:var(--brand-cream) !important;
+  border:var(--border-thick) solid var(--brand-cream);
+  border-radius:20px;
+}
+
+/* ===== Academic Journey box matches spec ===== */
+.box--edu{
+  background:var(--brand-blue);
+  color:var(--brand-cream);
+  border:var(--border-thick) solid var(--brand-cream);
+  border-radius:20px;
+}
+
+/* ===== Projects: same thicker borders, images contained, dark bg ===== */
+.project-card{
+  background:var(--brand-blue);
+  color:var(--brand-cream);
+  border:var(--border-thick) solid var(--brand-cream);
+  border-radius:12px;
+  overflow:hidden; /* image never exceeds border */
+}
+.project-thumb{
+  width:100%;
+  height:12rem;
+  object-fit:cover;
+  display:block;
+  border-bottom:var(--border-thick) solid var(--brand-cream);
+}
+
+/* Section separators if you use them */
+.section{padding-top:2rem;padding-bottom:2rem;margin-top:1rem;margin-bottom:1rem}

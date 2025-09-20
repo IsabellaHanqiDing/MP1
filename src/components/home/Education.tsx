@@ -82,8 +82,8 @@ export default function Education() {
       position: 'relative',
       borderRadius: '25px',
       overflow: 'hidden',
-      backgroundColor: '#fcebe4',
-      border: '3px dashed #338bcc',
+      backgroundColor: '#015697',
+      border: '3px dashed #fcebe4',
       padding: '24px'
     }}>
       <h2 style={{
@@ -92,13 +92,13 @@ export default function Education() {
         gap: '12px',
         fontSize: '1.2rem',
         marginBottom: '24px',
-        color: '#d92f2f',
+        color: '#fcebe4',
         fontFamily: 'Kalam, cursive'
       }}>
         <div style={{
           padding: '8px',
           borderRadius: '10px',
-          backgroundColor: '#338bcc'
+          backgroundColor: '#015697'
         }}>
           <GraduationCap size={20} style={{ color: '#fcebe4' }} />
         </div>

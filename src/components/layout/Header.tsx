@@ -1,81 +1,34 @@
-// src/components/layout/Header.tsx - COMPLETE REPLACEMENT
+// src/components/layout/Header.tsx
 'use client'
-
-import { Fragment, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Container } from '@/components/layout/Container'
 import { navItems } from '@/config/siteConfig'
 import { name } from '@/config/infoConfig'
 
-function NavItem({ href, children }: { href: string; children: React.ReactNode }) {
-  let isActive = usePathname() === href
-
-  return (
-    <li style={{ listStyle: 'none' }}>
-      <Link
-        href={href}
-        style={{
-          padding: '8px 16px',
-          fontFamily: 'Inter, sans-serif',
-          fontSize: '14px',
-          color: '#015697',
-          borderBottom: isActive ? '2px solid #015697' : 'none',
-          textDecoration: 'none'
-        }}
-      >
-        {children}
-      </Link>
-    </li>
-  )
-}
-
 export function Header() {
   const pathname = usePathname()
-  const isBlogOrAbout = pathname?.includes('/blog') || pathname === '/about'
+  const isDark = true; // all three main areas are dark (blue) now
 
   return (
-    <header style={{
-      backgroundColor: isBlogOrAbout ? '#015697' : '#fff2df',
-      borderBottom: '2px solid',
-      borderColor: isBlogOrAbout ? '#fff2df' : '#015697',
-      padding: '20px 0'
-    }}>
+    <header style={{ backgroundColor: isDark ? '#015697' : '#fff', borderBottom: '2px solid #ffffff' }}>
       <Container>
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center'
-        }}>
-          <Link href="/" style={{
-            fontSize: '20px',
-            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-            fontWeight: '600',
-            color: isBlogOrAbout ? '#fff2df' : '#015697',
-            textDecoration: 'none'
-          }}>
+        <div className="flex items-center justify-between py-4">
+          <Link href="/" className="headline text-xl" style={{ color: '#ffffff', textDecoration: 'none' }}>
             {name}
           </Link>
-          
           <nav>
-            <ul style={{
-              display: 'flex',
-              gap: '24px',
-              margin: 0,
-              padding: 0
-            }}>
+            <ul className="flex gap-6">
               {navItems.map((item) => (
-                <li key={item.name} style={{ listStyle: 'none' }}>
+                <li key={item.name}>
                   <Link
                     href={item.href}
+                    className="font-body"
                     style={{
-                      fontFamily: 'Inter, sans-serif',
-                      fontSize: '14px',
-                      color: isBlogOrAbout ? '#fff2df' : '#015697',
+                      color: '#ffffff',
                       textDecoration: 'none',
-                      borderBottom: pathname === item.href ? '2px solid' : 'none',
-                      borderColor: isBlogOrAbout ? '#fff2df' : '#015697',
-                      paddingBottom: '2px'
+                      borderBottom: pathname === item.href ? '2px solid #ffffff' : 'none',
+                      paddingBottom: 2,
                     }}
                   >
                     {item.name}
