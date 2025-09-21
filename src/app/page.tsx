@@ -35,9 +35,9 @@ export default async function Home() {
           {/* LEFT: Profile image */}
           <div className="flex flex-col gap-6">
             <div style={{ width: 220 }}>
-              <div style={{ border: '4px solid #f3f0e2', borderRadius: 16, overflow: 'hidden' }}>
+              <div style={{ border: '4px solid #d9c1a1', borderRadius: 16, overflow: 'hidden' }}>
                 <Image
-                  src="/src/images/photo-2.png"
+                  src="/images/photo-2.png"
                   alt="Isabella profile"
                   width={220}
                   height={220}

@@ -39,7 +39,8 @@ export function BlogLayout({ blog, children }: { blog: BlogType; children: React
             <header className="flex flex-col">
               <h1 className="headline text-4xl sm:text-5xl break-words" style={{ color: '#f6f1e5' }}>{blog.title}</h1>
               <time dateTime={blog.date} className="order-first text-base opacity-90" style={{ color: '#d9c1a1' }}>
-                {formatDate(blog.date)} · {blog.author}
+                {formatDate(blog.date)}
+                {blog.author && ` · ${blog.author}`}
               </time>
             </header>
 

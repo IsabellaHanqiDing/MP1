@@ -2,8 +2,8 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 const variantStyles = {
-  primary: 'bg-[#002FA7] text-white border-2 border-[#ECBC41] hover:bg-[#ECBC41] hover:text-[#002FA7]',
-  secondary: 'bg-transparent text-white border-2 border-[#ECBC41] hover:bg-[#ECBC41] hover:text-[#002FA7]',
+  primary: 'bg-[#203655] text-white border-2 border-[#d9c1a1] hover:bg-[#d9c1a1] hover:text-[#203655]',
+  secondary: 'bg-transparent text-white border-2 border-[#d9c1a1] hover:bg-[#d9c1a1] hover:text-[#203655]',
 }
 
 type ButtonProps = {
