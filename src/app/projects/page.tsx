@@ -22,10 +22,10 @@ export default function ProjectsPage() {
     <div className="projects-theme" style={{ minHeight: '100vh' }}>
       <Container className="pt-16 sm:pt-32">
         <div style={{ marginBottom: '48px' }}>
-          <h1 className="headline" style={{ fontSize: '48px', marginBottom: '16px' }}>
+          <h1 className="headline" style={{ fontSize: '48px', marginBottom: '16px', color: '#f6f1e5' }}>
             {projectHeadLine}
           </h1>
-          <p style={{ fontSize: '16px' }}>
+          <p style={{ fontSize: '16px', color: '#f6f1e5' }}>
             {projectIntro}
           </p>
         </div>
@@ -33,8 +33,8 @@ export default function ProjectsPage() {
         {/* Category Filter */}
         <div style={{ marginBottom: '40px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
-            <Filter size={20} />
-            <h2 className="headline" style={{ fontSize: '20px' }}>Filter by Category</h2>
+            <Filter size={20} style={{ color: '#FFFFFF' }} />
+            <h2 className="headline" style={{ fontSize: '20px', color: '#f6f1e5' }}>Filter by Category</h2>
           </div>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
@@ -44,13 +44,14 @@ export default function ProjectsPage() {
                 onClick={() => setSelectedCategory(category)}
                 style={{
                   padding: '8px 24px',
-                  backgroundColor: selectedCategory === category ? '#015697' : '#fff2df',
-                  color: selectedCategory === category ? '#fff2df' : '#015697',
-                  border: '2px solid #015697',
-                  fontFamily: 'var(--font-inter)',
+                  backgroundColor: selectedCategory === category ? '#d9c1a1' : '#203655',
+                  color: selectedCategory === category ? '#203655' : '#f6f1e5',
+                  border: '2px solid #d9c1a1',
+                  fontFamily: 'var(--font-body)',
                   fontSize: '14px',
                   cursor: 'pointer',
-                  transition: 'all 0.2s'
+                  transition: 'all 0.2s',
+                  borderRadius: '8px'
                 }}
               >
                 {category === 'all' ? 'All' : category.replace('-', ' ')}
@@ -67,7 +68,7 @@ export default function ProjectsPage() {
             ))}
           </ul>
         ) : (
-          <div style={{ textAlign: 'center', padding: '64px' }}>
+          <div style={{ textAlign: 'center', padding: '64px', color: '#f6f1e5' }}>
             No projects found in this category.
           </div>
         )}

@@ -12,10 +12,10 @@ export function ActivityCard({ activity, titleAs }: { activity: ActivityItemType
   return (
     <Wrapper {...(wrapperProps as any)}>
       <div className="box--home p-4">
-        <Component className="headline text-base mb-1">{activity.name}</Component>
-        <p className="text-sm">{activity.description}</p>
+        <Component className="headline text-base mb-1" style={{ color: '#FFFFFF' }}>{activity.name}</Component>
+        <p className="text-sm" style={{ color: '#FFFFFF' }}>{activity.description}</p>
         {(activity.date || activity.location) && (
-          <div className="mt-2 text-xs opacity-80">
+          <div className="mt-2 text-xs opacity-80" style={{ color: '#f6f1e5' }}>
             {activity.date}{activity.date && activity.location ? ' · ' : ''}{activity.location}
           </div>
         )}

@@ -22,14 +22,15 @@ export default function About() {
                 alt="Isabella portrait"
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="aspect-square rounded-2xl object-cover"
+                style={{ border: '4px solid #d9c1a1' }}
               />
             </div>
           </div>
 
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="headline text-4xl">{aboutMeHeadline || 'About Isabella'}</h1>
+            <h1 className="headline text-4xl" style={{ color: '#f6f1e5' }}>{aboutMeHeadline || 'About Isabella'}</h1>
             <div className="mt-6 space-y-7 text-lg">
-              {aboutParagraphs.map((p, i) => (<p key={i}>{p}</p>))}
+              {aboutParagraphs.map((p, i) => (<p key={i} style={{ color: '#f6f1e5' }}>{p}</p>))}
             </div>
           </div>
         </div>

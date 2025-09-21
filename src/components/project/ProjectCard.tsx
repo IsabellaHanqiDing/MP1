@@ -19,12 +19,12 @@ export function ProjectCard({ project, titleAs }: { project: ProjectItemType; ti
             </div>
           )}
           <div className="p-4">
-            <Component className="headline text-xl mb-1">{project.name}</Component>
-            <p className="text-sm">{project.description}</p>
+            <Component className="headline text-xl mb-1" style={{ color: '#f6f1e5' }}>{project.name}</Component>
+            <p className="text-sm" style={{ color: '#f6f1e5' }}>{project.description}</p>
             {!!project.tags?.length && (
               <div className="flex flex-wrap gap-2 mt-3">
                 {project.tags.map((tag, i) => (
-                  <span key={i} className="px-2 py-1 text-xs rounded-full" style={{ border: 'var(--border-thick) solid var(--brand-cream)' }}>
+                  <span key={i} className="px-2 py-1 text-xs rounded-full" style={{ border: '2px solid #d9c1a1', color: '#f6f1e5' }}>
                     {tag}
                   </span>
                 ))}

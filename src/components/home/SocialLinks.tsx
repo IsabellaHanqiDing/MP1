@@ -2,7 +2,6 @@
 "use client"
 
 import { email, socialLinks } from '@/config/infoConfig'
-import { utm_source } from '@/config/siteConfig'
 import Link from 'next/link'
 import { CustomIcon } from '@/components/shared/CustomIcon'
 import { cn } from '@/lib/utils'
@@ -17,7 +16,16 @@ export default function SocialLinks({ className }: { className?: string }) {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={link.ariaLabel ?? `Follow on ${link.name}`}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white/70 hover:text-white hover:bg-purple-600/20 hover:shadow-[0_0_15px_rgba(168,85,247,0.25)] transition-all duration-200"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-md transition-all duration-200"
+                    style={{ color: '#d9c1a1', border: '2px solid #d9c1a1' }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = '#d9c1a1';
+                        e.currentTarget.style.color = '#203655';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.color = '#d9c1a1';
+                    }}
                 >
                     <CustomIcon name={link.icon} />
                     <span className="sr-only">{link.name}</span>
@@ -28,7 +36,16 @@ export default function SocialLinks({ className }: { className?: string }) {
                 target="_blank"
                 rel="noreferrer"
                 aria-label='Email'
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white/70 hover:text-white hover:bg-pink-600/20 hover:shadow-[0_0_15px_rgba(219,39,119,0.25)] transition-all duration-200"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-md transition-all duration-200"
+                style={{ color: '#d9c1a1', border: '2px solid #d9c1a1' }}
+                onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#d9c1a1';
+                    e.currentTarget.style.color = '#203655';
+                }}
+                onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.color = '#d9c1a1';
+                }}
             >
                 <CustomIcon name='email' />
                 <span className="sr-only">Email</span>

@@ -19,12 +19,6 @@ export const AppContext = createContext<{ previousPathname?: string }>({})
 export function Providers({ children }: { children: React.ReactNode }) {
   let pathname = usePathname()
   let previousPathname = usePrevious(pathname)
-  
-  // Remove dark mode forcing
-  useEffect(() => {
-    document.documentElement.classList.remove('dark')
-    document.documentElement.classList.add('light')
-  }, [])
 
   return (
     <AppContext.Provider value={{ previousPathname }}>

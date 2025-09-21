@@ -23,7 +23,7 @@ export default async function BlogPage({ params }: Props) {
   return (
     <main className="page--dark">
       <BlogLayout blog={blog}>
-        <div className="mt-8 prose">
+        <div className="mt-8 prose" style={{ color: '#f6f1e5' }}>
           {content}
         </div>
       </BlogLayout>

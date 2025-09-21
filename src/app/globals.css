@@ -1,96 +1,100 @@
 /* src/app/globals.css */
 
-/* ===== Design tokens (only these three colors are used) ===== */
-:root{
-  --brand-blue: #015697;   /* primary background */
-  --brand-cream: #fcebe4;  /* requested text color */
-  --brand-brown: #8B4513;  /* kept if you still use brown lines elsewhere */
+/* ===== Design tokens ===== */
+:root {
+  --brand-blue: #203655;   /* primary background */
+  --brand-white: #f6f1e5;  /* text color */
+  --brand-gold: #d9c1a1;   /* borders and icons */
 
-  /* shadcn/ui semantic tokens so all components follow automatically */
+  /* shadcn/ui semantic tokens */
   --background: var(--brand-blue);
-  --foreground: var(--brand-cream);
+  --foreground: var(--brand-white);
 
   --primary: var(--brand-blue);
-  --primary-foreground: var(--brand-cream);
+  --primary-foreground: var(--brand-white);
 
   --secondary: var(--brand-blue);
-  --secondary-foreground: var(--brand-cream);
+  --secondary-foreground: var(--brand-white);
 
   --accent: var(--brand-blue);
-  --accent-foreground: var(--brand-cream);
+  --accent-foreground: var(--brand-white);
 
   --muted: var(--brand-blue);
-  --muted-foreground: var(--brand-cream);
+  --muted-foreground: var(--brand-white);
 
   --popover: var(--brand-blue);
-  --popover-foreground: var(--brand-cream);
+  --popover-foreground: var(--brand-white);
 
   --card: var(--brand-blue);
-  --card-foreground: var(--brand-cream);
+  --card-foreground: var(--brand-white);
 
-  --border: var(--brand-cream);
-  --input: var(--brand-cream);
-  --ring: var(--brand-cream);
+  --border: var(--brand-gold);
+  --input: var(--brand-gold);
+  --ring: var(--brand-gold);
 
   --radius: 0.75rem;
-  --border-thick: 4px; /* thicker lines */
+  --border-thick: 4px;
 }
 
-/* ===== Base typography (uniform) ===== */
-html,body{min-height:100%}
-body{
-  margin:0;
-  background:var(--background);
-  color:var(--foreground);
-  font-family:var(--font-body);
+/* ===== Base typography ===== */
+html, body { min-height: 100% }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
 }
-h1,h2,h3,.headline,.tech-heading{font-family:var(--font-headline)}
+h1, h2, h3, .headline, .tech-heading { 
+  font-family: var(--font-headline);
+  color: var(--brand-white);
+}
 
-/* ===== Page wrappers (all pages now share blue bg + cream text) ===== */
+/* ===== Page wrappers ===== */
 .home-theme,
 .page--dark,
-.projects-theme{background:var(--brand-blue);color:var(--brand-cream)}
-/* keep white dotted hover outlines you already use elsewhere */
-button,.btn,a,.hoverable{
-  transition:transform .2s ease,box-shadow .2s ease,outline-color .2s ease,border-color .2s ease,background-color .2s ease,color .2s ease;
-}
-button:hover,.btn:hover,a:hover,.hoverable:hover{
-  transform:translateY(-2px);
-  outline:2px dotted #ffffff; /* white dotted hover retained */
-  outline-offset:2px;
+.projects-theme {
+  background: var(--brand-blue);
+  color: var(--brand-white);
 }
 
-/* ===== Home “box” sections now dark-blue with cream text ===== */
-.box--home{
-  background:var(--brand-blue);
-  color:var(--brand-cream) !important;
-  border:var(--border-thick) solid var(--brand-cream);
-  border-radius:20px;
+/* ===== Hover effects ===== */
+button, .btn, a, .hoverable {
+  transition: transform .2s ease, box-shadow .2s ease, outline-color .2s ease;
+}
+button:hover, .btn:hover, a:hover, .hoverable:hover {
+  transform: translateY(-2px);
+  outline: 2px dotted var(--brand-gold);
+  outline-offset: 2px;
 }
 
-/* ===== Academic Journey box matches spec ===== */
-.box--edu{
-  background:var(--brand-blue);
-  color:var(--brand-cream);
-  border:var(--border-thick) solid var(--brand-cream);
-  border-radius:20px;
+/* ===== Box sections ===== */
+.box--home, .box--edu {
+  background: var(--brand-blue);
+  color: var(--brand-white) !important;
+  border: var(--border-thick) solid var(--brand-gold);
+  border-radius: 20px;
 }
 
-/* ===== Projects: same thicker borders, images contained, dark bg ===== */
-.project-card{
-  background:var(--brand-blue);
-  color:var(--brand-cream);
-  border:var(--border-thick) solid var(--brand-cream);
-  border-radius:12px;
-  overflow:hidden; /* image never exceeds border */
+/* ===== Projects ===== */
+.project-card {
+  background: var(--brand-blue);
+  color: var(--brand-white);
+  border: var(--border-thick) solid var(--brand-gold);
+  border-radius: 12px;
+  overflow: hidden;
 }
-.project-thumb{
-  width:100%;
-  height:12rem;
-  object-fit:cover;
-  display:block;
-  border-bottom:var(--border-thick) solid var(--brand-cream);
+.project-thumb {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  display: block;
+  border-bottom: var(--border-thick) solid var(--brand-gold);
 }
 
-/* Section separators if you use them */
-.section{padding-top:2rem;padding-bottom:2rem;margin-top:1rem;margin-bottom:1rem}
+/* ===== Section spacing ===== */
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

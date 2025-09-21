@@ -9,7 +9,7 @@ import './globals.css'
 import { Caveat, Inter } from 'next/font/google'
 
 const headlineFont = Caveat({ subsets: ['latin'], variable: '--font-headline', display: 'swap' })
-const bodyFont     = Inter({   subsets: ['latin'], variable: '--font-body',     display: 'swap' })
+const bodyFont = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' })
 
 export const metadata: Metadata = {
   title: { template: `%s - ${name}`, default: `${name} - ${headline}` },

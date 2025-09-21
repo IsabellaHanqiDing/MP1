@@ -23,7 +23,7 @@ export default function ProjectDetailPage({ params }: Props) {
     <main className="projects-theme min-h-screen">
       <Container className="mt-16">
         {/* Back */}
-        <Link href="/projects" className="inline-flex items-center gap-2 mb-8" style={{ color: '#015697' }}>
+        <Link href="/projects" className="inline-flex items-center gap-2 mb-8" style={{ color: '#d9c1a1' }}>
           <ArrowLeft size={20} />
           <span className="headline">Back to Projects</span>
         </Link>
@@ -31,7 +31,7 @@ export default function ProjectDetailPage({ params }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Images */}
           <div className="space-y-6">
-            <div className="rounded-soft overflow-hidden" style={{ border: '2px solid #015697' }}>
+            <div className="rounded-soft overflow-hidden" style={{ border: '2px solid #d9c1a1' }}>
               {project?.images && project.images[0] ? (
                 <Image src={project.images[0]} alt={project.name} width={800} height={600} className="w-full h-auto" />
               ) : (
@@ -42,7 +42,7 @@ export default function ProjectDetailPage({ params }: Props) {
             {project?.images && project.images.length > 1 && (
               <div className="grid grid-cols-2 gap-4">
                 {project.images.slice(1).map((image, index) => (
-                  <div key={index} className="rounded-soft overflow-hidden" style={{ border: '2px solid #015697' }}>
+                  <div key={index} className="rounded-soft overflow-hidden" style={{ border: '2px solid #d9c1a1' }}>
                     <Image src={image} alt={`${project.name} ${index + 2}`} width={400} height={300} className="w-full h-auto" />
                   </div>
                 ))}
@@ -53,45 +53,45 @@ export default function ProjectDetailPage({ params }: Props) {
           {/* Details */}
           <div className="space-y-6">
             <div>
-              <h1 className="headline" style={{ fontSize: '40px' }}>{project?.name}</h1>
-              <p style={{ fontSize: '18px' }}>{project?.description}</p>
+              <h1 className="headline" style={{ fontSize: '40px', color: '#f6f1e5' }}>{project?.name}</h1>
+              <p style={{ fontSize: '18px', color: '#f6f1e5' }}>{project?.description}</p>
             </div>
 
             {project?.thoughts && (
-              <div className="rounded-soft p-6" style={{ border: '2px solid #015697' }}>
-                <h2 className="headline" style={{ fontSize: '24px', marginBottom: '12px' }}>My Thoughts</h2>
+              <div className="rounded-soft p-6" style={{ border: '2px solid #d9c1a1' }}>
+                <h2 className="headline" style={{ fontSize: '24px', marginBottom: '12px', color: '#f6f1e5' }}>My Thoughts</h2>
                 <div className="space-y-4">
-                  {project.thoughts.split('\n').map((paragraph, idx) => (<p key={idx}>{paragraph}</p>))}
+                  {project.thoughts.split('\n').map((paragraph, idx) => (<p key={idx} style={{ color: '#f6f1e5' }}>{paragraph}</p>))}
                 </div>
               </div>
             )}
 
             {project?.tags && project.tags.length > 0 && (
               <div>
-                <h3 className="headline" style={{ fontSize: '20px', marginBottom: '12px' }}>Technologies Used</h3>
+                <h3 className="headline" style={{ fontSize: '20px', marginBottom: '12px', color: '#f6f1e5' }}>Technologies Used</h3>
                 <div className="flex flex-wrap gap-3">
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="rounded-soft px-4 py-2" style={{ border: '2px solid #015697' }}>{tag}</span>
+                    <span key={i} className="rounded-soft px-4 py-2" style={{ border: '2px solid #d9c1a1', color: '#f6f1e5' }}>{tag}</span>
                   ))}
                 </div>
               </div>
             )}
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <a href={project?.link.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-soft" style={{ background: '#015697', color: '#fff2df', border: '2px solid #015697' }}>
+              <a href={project?.link.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-soft" style={{ background: '#d9c1a1', color: '#203655', border: '2px solid #d9c1a1' }}>
                 <ExternalLink size={18} />
                 View Project
               </a>
 
               {project?.demoLink && (
-                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-soft" style={{ background: '#015697', color: '#fff2df', border: '2px solid #015697' }}>
+                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-soft" style={{ background: '#d9c1a1', color: '#203655', border: '2px solid #d9c1a1' }}>
                   <Play size={18} />
                   Play Demo
                 </a>
               )}
 
               {project?.downloadLink && (
-                <a href={project.downloadLink} download className="inline-flex items-center gap-2 px-6 py-3 rounded-soft" style={{ background: '#015697', color: '#fff2df', border: '2px solid #015697' }}>
+                <a href={project.downloadLink} download className="inline-flex items-center gap-2 px-6 py-3 rounded-soft" style={{ background: '#d9c1a1', color: '#203655', border: '2px solid #d9c1a1' }}>
                   <Download size={18} />
                   Download
                 </a>

@@ -8,13 +8,12 @@ import { name } from '@/config/infoConfig'
 
 export function Header() {
   const pathname = usePathname()
-  const isDark = true; // all three main areas are dark (blue) now
 
   return (
-    <header style={{ backgroundColor: isDark ? '#015697' : '#fff', borderBottom: '2px solid #ffffff' }}>
+    <header style={{ backgroundColor: '#203655', borderBottom: '2px solid #d9c1a1' }}>
       <Container>
         <div className="flex items-center justify-between py-4">
-          <Link href="/" className="headline text-xl" style={{ color: '#ffffff', textDecoration: 'none' }}>
+          <Link href="/" className="headline text-xl" style={{ color: '#f6f1e5', textDecoration: 'none' }}>
             {name}
           </Link>
           <nav>
@@ -25,9 +24,9 @@ export function Header() {
                     href={item.href}
                     className="font-body"
                     style={{
-                      color: '#ffffff',
+                      color: '#f6f1e5',
                       textDecoration: 'none',
-                      borderBottom: pathname === item.href ? '2px solid #ffffff' : 'none',
+                      borderBottom: pathname === item.href ? '2px solid #d9c1a1' : 'none',
                       paddingBottom: 2,
                     }}
                   >
