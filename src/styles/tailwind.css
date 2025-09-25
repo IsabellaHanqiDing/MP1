@@ -1,5 +1,5 @@
 /* src/styles/tailwind.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Caveat:wght@400;700&display=swap');
+/* No Google Font imports - using Schoolbell font */
 
 @tailwind base;
 @tailwind components;
@@ -33,18 +33,20 @@
   body {
     @apply bg-background text-foreground;
     background: #203655;
-    font-family: 'Inter', sans-serif !important;
+    /* Schoolbell font will be applied via CSS variable */
+    font-family: var(--font-schoolbell), cursive, sans-serif !important;
   }
 
   .dark { display: none; }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Caveat', cursive !important;
+    /* Schoolbell font will be applied via CSS variable */
+    font-family: var(--font-schoolbell), cursive, sans-serif !important;
     @apply text-white;
   }
 
   .tech-heading {
-    font-family: 'Caveat', cursive !important;
+    font-family: var(--font-schoolbell), cursive, sans-serif !important;
     text-transform: none;
     letter-spacing: normal;
   }
