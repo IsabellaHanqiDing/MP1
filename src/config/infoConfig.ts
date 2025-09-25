@@ -47,7 +47,7 @@ export const githubUsername = 'IsabellaHanqiDing'
 export const aboutMeHeadline = 'About Isabella'
 export const aboutParagraphs = [
   "Coucou Les Amis! My name is Isabella Hanqi Ding. I graduated from York University Digital Media program. Since then, I've been exploring the intersection of technology, creativity, and play.",
-  "I'm currently focused on game, UIUX and website design.",
+  "I originally come from Hainan Province, the southernmost island of China — a warm, tropical place filled with oceans, palm trees, and coconuts. Moving to Canada for university was like traveling from one end of the earth to the other, both in distance and temperature. This cultural and environmental shift has deeply influenced the way I see the world and design experiences.",
   "I started this blog to share the insights I learn every day. Most blogs focus on Game analysis, Game design, website design and interactive art, while others share the life lessons I've learned.",
   "When I'm not designing or coding, I'm making music (Logic Pro, Adobe Audition) or out with my camera capturing everyday stories."
 ] 
@@ -55,8 +55,8 @@ export const aboutParagraphs = [
 // ============================================
 // BLOG SECTION
 // ============================================
-export const blogHeadLine = "What I've been thinking about."
-export const blogIntro = "I've written something about game, programming, arts and life."
+export const blogHeadLine = "What I've been thinking about and some of my articles."
+export const blogIntro = "I've written something about game, programming, film, arts and life."
 
 // ============================================
 // PROJECTS SECTION
@@ -130,6 +130,33 @@ export const projects: Array<ProjectItemType> = [
     The reason for choosing this dataset is that I am a fan of Manchester City but have never been to a live match, so I wanted to document their itinerary on the map. 
     For the overall color, I chose the blue color that represents Manchester City. The small boat in the middle is also a symbol of Manchester City. 
     When the mouse hovers over the small boat, you can view detailed information such as the exact competition date and results. `
+  },
+    {
+    name: 'Java - Mini Java Game',
+    description: 'Developed a basic 2 players card game using Java.',
+    link: { href: 'https://drive.google.com/file/d/1ewI4NujdxiMv4qry_RZykrv4SCMz-sMW/view?usp=sharing', label: 'View Demo' },
+    tags: ['Eclipse', 'Java'],
+    category: 'programming',
+    images: [
+      '/images/projects/JavaGame-1.jpg',
+      '/images/projects/JavaGame-2.jpg'
+    ],
+    thoughts: `In this Java project, I created a simple card game that relies on probability. 
+    Each player has a certain number of red and black cards, with different values. 
+    The red cards can reduce the opponent's health points, while the black cards can increase one's own health points. 
+    Drawing a blue card allows one to roll the dice again. Both players start with 100 health points.
+    The player who loses all their health points first or whose health points are higher after five rounds wins. `
+  },
+   {
+    name: 'Java - Java Ghost',
+    description: 'Draw four little ghosts using Java.',
+    link: { href: 'https://drive.google.com/file/d/1nH7PzGHWgNtpRGfn7n1QiWSmcuK1uQyW/view?usp=sharing', label: 'View Demo' },
+    tags: ['Eclipse', 'Java'],
+    category: 'programming',
+    images: [
+      '/images/projects/JavaGhost.jpg'
+    ],
+    thoughts: `In this project, I used Java to simply draw four little ghosts of different colors. `
   },
   {
     name: 'Board Game-Extraterrestrial Battle',
