@@ -94,13 +94,10 @@ export const projects: Array<ProjectItemType> = [
       '/images/projects/datamusi-0.png',
       '/images/projects/datamusi-1.png'
     ],
-    thoughts: `First, I downloaded a song from a free audio material website and imported it into my p5.js project. 
-    Then, I decided to use various shapes to represent different parts of the audio. 
-    For example, I used larger pink circles to show amplitude changes, smaller blue circles to display the frequency spectrum, and a white irregular circle in the center of the screen for beat detection. 
-    Additionally, I used vertical lines to form a wave pattern, changing their colors and sizes to represent the audio's spectral centroid. I chose the piece of music "good night" because the entire song has a very chill vibe, just like its name, making it perfect for relaxation at night.
-    I opted to use two different colors for the circles to simulate the bubbles in a bathtub during a nighttime bath, creating a dreamy atmosphere. The white circle in the middle, which shows beat detection, doesn't have sharp changes or movements. 
-    Against the black background, it appears somewhat cute.
-    Link to Music: https://pixabay.com/music/beats-good-night-160166/`
+    thoughts: `This work involves converting different musical arrangements into visual videos through code. 
+    The main melody represents the central circle. The various circles of different sizes and colors distributed around it represent the sounds of drums, saxophones, and so on. 
+    I chose to combine this piece with dreamy pink and various circles based on the gentle and romantic style of the music.
+    The play/pause button in the upper left corner makes it much easier to start and stop the playback of this work.`
   },
     {
     name: 'Data Visualization - listening preference',
@@ -112,18 +109,10 @@ export const projects: Array<ProjectItemType> = [
       '/images/projects/datalisten-1.png',
       '/images/projects/datalisten-2.png'
     ],
-    thoughts: `I used a portion of my data, including dates I previously collected,
-the genres of songs listened to, and the number of songs listened to in each genre. I chose to
-represent each music genre with a color bar, where the height of the color bar is determined by the
-count of genres. The purpose of using this method is to combine music genres with colors. I
-selected colors that I thought were suitable for each music genre, displaying only the genres I
-listened to on the same day. By switching dates through a button next to it, one can clearly see the
-types of songs listened to each day and their respective quantities. In the setup, I updated the
-"genreColors" object to display the colors I wanted for each genre, and in drawGenres, I used
-noStroke() to remove the borders. Lastly, I used drawGenres to check the position of the mouse,
-showing the corresponding song genre and the number of songs listened to in that genre on the day
-only when the mouse hovers over the color bar. Additionally, I called redraw() in mouseMoved to
-ensure the screen is redrawn every time the mouse moves.`
+    thoughts: `In this work, I imported all the songs that I had listened to over a period of time and categorized them.
+    Different song types are represented by different colors, and the larger the color proportion, the more times I have listened to it. 
+    By clicking the button on the top left corner, you can switch to different dates, making it easier to view. 
+    When the mouse hovers over a different color, you can view in detail the song type represented by that color and the number of times I have listened to it.`
   },
     {
     name: 'Data Visualization - match locations',
@@ -139,13 +128,8 @@ ensure the screen is redrawn every time the mouse moves.`
     thoughts: `In this visualization, I have chosen the data of all match locations, dates, and outcomes for Manchester City Football Club for the 23-24 season up to the present. 
     I used “Mapbox” to display the team's journey through each stadium and the match outcomes on the map. 
     The reason for choosing this dataset is that I am a fan of Manchester City but have never been to a live match, so I wanted to document their itinerary on the map. 
-    In Mapbox, I utilized a photo of the Etihad Stadium as the base map's color scheme, and placed it in P5.js. I drew a boat-shaped location marker with the “drawBoat()” function to represent Manchester City, as there is a boat in the club's emblem. 
-    The "mouseMoved()" function is used to display the details of the match in the top-left corner of the screen when the mouse hovers over the boat. 
-    When Manchester City wins a match, the boat representing the team is colored blue, turns black when they lose, and white in the event of a draw. 
-    The most challenging part of this project was creating a world map and using dots to display the locations of each match, connecting them with lines. 
-    Clicking on each dot zooms in on the map to enter the stadium area, where specific details of the match can be viewed. 
-    For this part, I used “loadGlobalViewMap()” to display the overall world map and “drawGlobalView()” to show the points on the map. 
-`
+    For the overall color, I chose the blue color that represents Manchester City. The small boat in the middle is also a symbol of Manchester City. 
+    When the mouse hovers over the small boat, you can view detailed information such as the exact competition date and results. `
   },
   {
     name: 'Board Game-Extraterrestrial Battle',
@@ -203,7 +187,8 @@ ensure the screen is redrawn every time the mouse moves.`
       '/images/projects/camera-2.png',
       '/images/projects/camera-1.png'
     ],
-    thoughts: ``
+    thoughts: `This camera was created by me using a model made in Maya based on the three-view diagrams of a real Canon camera.
+    All the accessories of the camera are precisely restored in proportion.`
   },
   {
     name: '3D Modeling - Girl',
@@ -216,24 +201,9 @@ ensure the screen is redrawn every time the mouse moves.`
       '/images/projects/girl-2.png',
       '/images/projects/girl-1.png',
     ],
-    thoughts: `In this project, I made a cartoon character, a little blonde girl. I first made
-half of her face and then smoothed the model. One difficulty here is that it is difficult
-for me to make the connection between the girl's ear and face smooth. I first thought
-of dividing the face and ear into two models, but later, after repeated attempts, I found
-that it would be easier to make the ears and face together. After filling the eyes, I added
-eyelashes and eyebrows to the anime girl's face.
-
-Next, I hid the face and started to work on the left side of the body, which
-was a difficult step in my model because I needed to make the top first and then add
-the arms and hands. To make the top part of the girl look like the shoulder part in the
-picture, I made an oval model and stacked it with the shoulder part of the dress by
-using “Mesh”→“Booleans”→ “Difference”. The result is that the shoulder part of the
-garment is empty.
-
-The relatively easy part is the making of skirts, legs, and shoes, because
-these parts don't require a lot of cutting and irregular modeling. I made the belt, the
-top part of the dress and the bottom petticoat separately to better distinguish the
-layers of the dress.`
+    thoughts: `In this project, I made a cartoon character according to a three view drawing, a little blonde girl. 
+    I first made half of her face and then smoothed the model. 
+One difficulty here is that it is difficult for me to make the connection between the girl's ear and face smooth.`
   },
   {
     name: '2D Painting - Flowers',
@@ -243,6 +213,17 @@ layers of the dress.`
     category: '2d-arts',
          images: [
       '/images/projects/flowers.PNG',
+    ],
+    thoughts: ``
+  },
+    {
+    name: '2D Painting - Willow trees and swallows',
+    description: '2D Paintings.',
+    link: { href: 'https://drive.google.com/file/d/1_Jwipca_OYmtODqGIhlTB5vYqM9nmBjZ/view?usp=sharing', label: 'View Project' },
+    tags: ['Procreate','2D Arts'],
+    category: '2d-arts',
+         images: [
+      '/images/projects/Willow trees and swallows.PNG',
     ],
     thoughts: ``
   },
@@ -258,13 +239,46 @@ layers of the dress.`
     thoughts: ``
   },
   {
-    name: '2D Painting - Willow trees and swallows',
+    name: '2D Painting - Rain',
     description: '2D Paintings.',
-    link: { href: 'https://drive.google.com/file/d/1_Jwipca_OYmtODqGIhlTB5vYqM9nmBjZ/view?usp=sharing', label: 'View Project' },
+    link: { href: 'https://drive.google.com/file/d/1cwERuiDSlq_EEPmPPu6WUSJ49kkQjZ2V/view?usp=drive_link', label: 'View Project' },
     tags: ['Procreate','2D Arts'],
     category: '2d-arts',
          images: [
-      '/images/projects/Willow trees and swallows.PNG',
+      '/images/projects/Rain.png',
+    ],
+    thoughts: ``
+  },
+   {
+    name: '2D Painting - Myself',
+    description: '2D Paintings.',
+    link: { href: 'https://drive.google.com/file/d/1-0aXu5iweYX0WhdQvp2nZhVzr67nc0Ft/view?usp=sharing', label: 'View Project' },
+    tags: ['Procreate','2D Arts'],
+    category: '2d-arts',
+         images: [
+      '/images/projects/Myself.png',
+    ],
+    thoughts: ``
+  },
+   {
+    name: '2D Painting - Mountain and Lake',
+    description: '2D Paintings.',
+    link: { href: 'https://drive.google.com/file/d/1h5xBIwPwko41XIP1roFB4Mzzf1sEGZia/view?usp=sharing', label: 'View Project' },
+    tags: ['Procreate','2D Arts'],
+    category: '2d-arts',
+         images: [
+      '/images/projects/Mountain and Lake.png',
+    ],
+    thoughts: ``
+  },
+   {
+    name: '2D Painting - Grass',
+    description: '2D Paintings.',
+    link: { href: 'https://drive.google.com/file/d/1rpeJ2DTOfKtpxq-x2AsO8x5sNvNtxwsB/view?usp=sharing', label: 'View Project' },
+    tags: ['Procreate','2D Arts'],
+    category: '2d-arts',
+         images: [
+      '/images/projects/Grass.png',
     ],
     thoughts: ``
   }

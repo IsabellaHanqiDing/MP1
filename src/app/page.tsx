@@ -37,8 +37,8 @@ export default async function Home() {
             <div style={{ width: 220 }}>
               <div style={{ border: '4px solid #d9c1a1', borderRadius: 16, overflow: 'hidden' }}>
                 <Image
-                  src="/photo-2.png"
-                  alt="Isabella profile"
+                  src="/images/photo-2.png"
+                  alt="Isabella profile" 
                   width={220}
                   height={220}
                   className="block"
