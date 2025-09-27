@@ -241,7 +241,7 @@ One difficulty here is that it is difficult for me to make the connection betwee
          images: [
       '/images/projects/flowers.PNG',
     ],
-    thoughts: ``
+    thoughts: `This painting is a flower I created using Procreate. It adopts the traditional Chinese meticulous painting technique.`
   },
     {
     name: '2D Painting - Willow trees and swallows',
@@ -252,7 +252,7 @@ One difficulty here is that it is difficult for me to make the connection betwee
          images: [
       '/images/projects/Willow trees and swallows.PNG',
     ],
-    thoughts: ``
+    thoughts: `This picture was created by me using Procreate, and it employs the painting technique of Chinese ink wash painting.`
   },
   {
     name: '2D Painting - Snow and orange tree',
@@ -306,6 +306,17 @@ One difficulty here is that it is difficult for me to make the connection betwee
     category: '2d-arts',
          images: [
       '/images/projects/Grass.png',
+    ],
+    thoughts: ``
+  },
+   {
+    name: '2D Painting - Myself(Simple Version)',
+    description: '2D Paintings.',
+    link: { href: 'https://drive.google.com/file/d/12tkK6JN9NAZMhJslR-FQ4sgjhyANf0XM/view?usp=sharing', label: 'View Project' },
+    tags: ['Procreate','2D Arts'],
+    category: '2d-arts',
+         images: [
+      '/images/photo-2.png',
     ],
     thoughts: ``
   }
