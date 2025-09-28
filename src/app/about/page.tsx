@@ -4,8 +4,6 @@ import Image from 'next/image'
 import { Container } from '@/components/layout/Container'
 import { FloatingImagesContainer } from '@/components/shared/FloatingImagesContainer'
 import { FloatingImage } from '@/components/shared/FloatingImage'
-import { StaticImagesContainer } from '@/components/shared/StaticBackgroundImage'
-import { staticImagesConfig } from '@/config/staticImages'
 import portraitImage from '@/images/photo-1.png'
 
 
@@ -90,7 +88,7 @@ export default function AboutMe() {
               <div>
                 <h2 className="headline text-2xl mb-2">🧑‍🎨 Who I Am</h2>
                 <p>
-                  Hi, I'm <strong>Hanqi Ding</strong> — a Digital Media designer, game creator, and multimedia artist based in Toronto, Canada. I graduated from York University's Digital Media program in 2024.
+                  Hi, I&apos;m <strong>Hanqi Ding</strong> — a Digital Media designer, game creator, and multimedia artist based in Toronto, Canada. I graduated from York University's Digital Media program in 2024.
                   I come from <strong>Hainan Island</strong>, China — a tropical paradise of sea, beaches, tropical rain forest, and coconuts. Moving from Hainan to Toronto was like traveling from one end of the world to the other — from warmth to snow — a journey that shaped both my life and my creativity.
                 </p>
               </div>
@@ -98,7 +96,7 @@ export default function AboutMe() {
               <div>
                 <h2 className="headline text-2xl mb-2">🎨 My Creative Vision</h2>
                 <p>
-                  I'm deeply inspired by all forms of art — <strong>music, painting, photography, film, and video games</strong>. I see game design as a beautiful fusion of them all: a unique medium that invites players into immersive and interactive worlds.
+                  I&apos;m deeply inspired by all forms of art — <strong>music, painting, photography, film, and video games</strong>. I see game design as a beautiful fusion of them all: a unique medium that invites players into immersive and interactive worlds.
                   I love combining storytelling with visual design, building experiences that are playful, emotional, and memorable.
                 </p>
               </div>
@@ -106,7 +104,7 @@ export default function AboutMe() {
               <div>
                 <h2 className="headline text-2xl mb-2">🎵 Music & Multimedia</h2>
                 <ul className="list-disc list-inside space-y-2">
-                  <li>I've studied <strong>piano and singing</strong> since childhood</li>
+                  <li>I&apos;ve studied <strong>piano and singing</strong> since childhood</li>
                   <li>Taught myself the <strong>ukulele</strong> and some traditional Chinese instruments</li>
                   <li>Compose and edit with <strong>Logic Pro</strong> and <strong>Adobe Audition</strong></li>
                   <li>Blogger on Chinese video/music platforms — my most popular video reached <strong>48,000 views</strong></li>
@@ -157,8 +155,8 @@ export default function AboutMe() {
               <div>
                 <h2 className="headline text-2xl mb-2">💡 Let's Connect</h2>
                 <p>
-                  Whether you're here to explore my projects, listen to my music, or get to know me better — welcome!
-                  I'd love to collaborate, connect, or just chat about design, games, and creativity.
+                  Whether you&apos;re here to explore my projects, listen to my music, or get to know me better — welcome!
+                  I&apos;d love to collaborate, connect, or just chat about design, games, and creativity.
                 </p>
               </div>
             </div>
