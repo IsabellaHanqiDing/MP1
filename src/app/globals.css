@@ -57,7 +57,6 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-
   font-family: var(--font-schoolbell) !important;
 }
 
@@ -72,6 +71,70 @@ p, span, div, a, button, input, textarea, select, label, li, td, th {
 
 .font-body, .font-headline {
   font-family: var(--font-schoolbell) !important;
+}
+
+/* ===== BACKGROUND PAINTINGS SYSTEM ===== */
+
+/* Base class for pages with background paintings */
+.page-with-background {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Background painting container */
+.background-painting {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.15; /* Very subtle so text remains readable */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Different backgrounds for different pages */
+.bg-home {
+  background-image: url('/images/backgrounds/home-painting.jpg');
+}
+
+.bg-about {
+  background-image: url('/images/backgrounds/about-painting.jpg');
+}
+
+.bg-projects {
+  background-image: url('/images/backgrounds/projects-painting.jpg');
+}
+
+.bg-blogs {
+  background-image: url('/images/backgrounds/blogs-painting.jpg');
+}
+
+/* Content overlay to ensure text readability */
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  background: rgba(32, 54, 85, 0.85); /* Semi-transparent background */
+  backdrop-filter: blur(1px); /* Subtle blur effect */
+}
+
+/* Alternative: Gradient overlay for better text contrast */
+.gradient-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    135deg,
+    rgba(32, 54, 85, 0.9) 0%,
+    rgba(32, 54, 85, 0.7) 50%,
+    rgba(32, 54, 85, 0.9) 100%
+  );
 }
 
 /* ===== Page wrappers ===== */
@@ -122,4 +185,40 @@ button:hover, .btn:hover, a:hover, .hoverable:hover {
   padding-bottom: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+/* ===== Small decorative images ===== */
+.decorative-image {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.decorative-image.top-left {
+  top: 10%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+}
+
+.decorative-image.top-right {
+  top: 15%;
+  right: 5%;
+  width: 120px;
+  height: 120px;
+}
+
+.decorative-image.bottom-left {
+  bottom: 20%;
+  left: 8%;
+  width: 80px;
+  height: 80px;
+}
+
+.decorative-image.bottom-right {
+  bottom: 15%;
+  right: 10%;
+  width: 90px;
+  height: 90px;
 }
