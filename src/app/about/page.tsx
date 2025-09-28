@@ -88,7 +88,7 @@ export default function AboutMe() {
               <div>
                 <h2 className="headline text-2xl mb-2">🧑‍🎨 Who I Am</h2>
                 <p>
-                  Hi, I&apos;m <strong>Hanqi Ding</strong> — a Digital Media designer, game creator, and multimedia artist based in Toronto, Canada. I graduated from York University's Digital Media program in 2024.
+                  Hi, I&apos;m <strong>Hanqi Ding</strong> — a Digital Media designer, game creator, and multimedia artist based in Toronto, Canada. I graduated from York University&apos;s Digital Media program in 2024.
                   I come from <strong>Hainan Island</strong>, China — a tropical paradise of sea, beaches, tropical rain forest, and coconuts. Moving from Hainan to Toronto was like traveling from one end of the world to the other — from warmth to snow — a journey that shaped both my life and my creativity.
                 </p>
               </div>
@@ -124,9 +124,9 @@ export default function AboutMe() {
                   <li>⚽ Football Fan — I support <strong>Manchester City</strong> and love <strong>Haaland</strong> &amp; <strong>De Bruyne</strong></li>
                   <li>🎂 I love <strong>cooking and baking</strong> — especially watching cakes rise in the oven</li>
                   <li>🎬 Favorite movie: <strong>La La Land</strong> — I even created a full travel guide for Los Angeles based on the film</li>
-                  <li>🍜 Anime lover — especially <strong>Japanese food-related anime</strong> (I've probably watched them all!)</li>
+                  <li>🍜 Anime lover — especially <strong>Japanese food-related anime</strong> (I&apos;ve probably watched them all!)</li>
                   <li>
-                    🏁 I enjoy watching Formula 1 races. I’m a proud <strong>Tifosi</strong> fan — my favorite drivers are <strong>Charles Leclerc, Sebastian Vettel</strong>, and <strong>Zhou Guanyu</strong>.
+                    🏁 I enjoy watching Formula 1 races. I&apos;m a proud <strong>Tifosi</strong> fan — my favorite drivers are <strong>Charles Leclerc, Sebastian Vettel</strong>, and <strong>Zhou Guanyu</strong>.
                   </li>
                   <li>
                     🐶 I have a cute little white dog named <strong>Mifa</strong>. Mifa is three years old, full of energy, and appears in drawings across this site — try to spot them!
