@@ -153,7 +153,7 @@ export default function AboutMe() {
 
 
               <div>
-                <h2 className="headline text-2xl mb-2">💡 Let's Connect</h2>
+                <h2 className="headline text-2xl mb-2">💡 Let&apos;s Connect</h2>
                 <p>
                   Whether you&apos;re here to explore my projects, listen to my music, or get to know me better — welcome!
                   I&apos;d love to collaborate, connect, or just chat about design, games, and creativity.
