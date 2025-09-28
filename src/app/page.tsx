@@ -1,6 +1,8 @@
 // src/app/page.tsx
 import Image from 'next/image'
 import { Container } from '@/components/layout/Container'
+import { StaticImagesContainer } from '@/components/shared/StaticBackgroundImage'
+import { staticImagesConfig } from '@/config/staticImages'
 import SocialLinks from '@/components/home/SocialLinks'
 import { BlogCard } from '@/components/home/BlogCard'
 import { getAllBlogs, type BlogType } from '@/lib/blogs'
@@ -28,8 +30,16 @@ export default async function Home() {
   const featuredProjects = projects.slice(0, 3)
 
   return (
-    <main className="home-theme min-h-screen">
+    <main className="home-theme min-h-screen relative overflow-hidden">
       <Container className="mt-9">
+         <StaticImagesContainer images={staticImagesConfig.home} />
+      
+      <Container className="mt-9 relative z-20">
+        {/* Your existing home content */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          {/* ... rest of your content ... */}
+        </section>
+      </Container>
         {/* HERO */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           {/* LEFT: Profile image */}

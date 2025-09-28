@@ -4,7 +4,10 @@ import Image from 'next/image'
 import { Container } from '@/components/layout/Container'
 import { FloatingImagesContainer } from '@/components/shared/FloatingImagesContainer'
 import { FloatingImage } from '@/components/shared/FloatingImage'
+import { StaticImagesContainer } from '@/components/shared/StaticBackgroundImage'
+import { staticImagesConfig } from '@/config/staticImages'
 import portraitImage from '@/images/photo-1.png'
+
 
 export const metadata: Metadata = {
   title: 'About',
